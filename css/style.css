@@ -1,0 +1,580 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Ensures consistent padding and margin handling */
+}
+
+/* Body Styles */
+body {
+    font-family: 'Exo 2', sans-serif; /* Sets main font */
+    color: #333333; /* Text color */
+    background-color: #f0f4f8; /* Background color */
+    line-height: 1.6; /* Line spacing */
+    scroll-behavior: smooth; /* Enables smooth scrolling */
+    cursor: default; /* Standard mouse pointer */
+}
+
+/* Navigation Bar */
+nav {
+    position: fixed; /* Fixes nav bar at the top */
+    width: 100%; /* Full width of the page */
+    background-color: black; /* black for aerospace theme */
+    z-index: 1000; /* Keeps nav bar above all other elements */
+    top: 0; /* Fixes it at the top */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Subtle shadow under the nav bar */
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between; /* Spaces out the logo and menu */
+    align-items: center; /* Vertically centers items */
+    max-width: 1200px; /* Limits the nav container width */
+    margin: auto; /* Centers the nav bar */
+    padding: 10px 20px; /* Adds internal spacing */
+}
+
+.nav-logo a {
+    color: #FFFFFF; /* Logo text color */
+    font-size: 1.8rem; /* Large logo text */
+    font-weight: normal; /* Makes logo bold */
+    text-decoration: none; /* Removes underline */
+    letter-spacing: 1px; /* Adds space between letters */
+}
+
+/* Navigation menu */
+.nav-menu {
+    list-style: none; /* Removes default list styling */
+    display: flex; /* Aligns menu items horizontally */
+    align-items: center; /* Vertically centers items */
+}
+
+.nav-menu li {
+    margin-left: 25px; /* Spacing between menu items */
+}
+
+.nav-menu li a {
+    color: #FFFFFF; /* Menu item text color */
+    text-decoration: none; /* Removes underline from links */
+    font-size: 1rem; /* Menu text size */
+    transition: color 0.3s ease, transform 0.3s ease; /* Smooth hover effects */
+    padding: 5px 0; /* Adds space around text */
+    position: relative; /* Necessary for hover underline effect */
+}
+
+/* Hover underline effect */
+.nav-menu li a::after {
+    content: ''; /* Empty content for the line */
+    position: absolute; /* Positions the line relative to the link */
+    width: 0%; /* Initial width of the line (hidden) */
+    height: 2px; /* Thickness of the underline */
+    background-color: #FF4136; /* Red underline */
+    left: 0; /* Starts at the left edge of the link */
+    bottom: -5px; /* Positioned just below the text */
+    transition: width 0.3s ease; /* Smooth animation for the underline */
+}
+
+.nav-menu li a:hover::after {
+    width: 100%; /* Expands the underline on hover */
+}
+
+/* Hero Section */
+.hero {
+    background: url('../images/hero.jpg') no-repeat center center/cover; /* Background image covers the section */
+    height: 100vh; /* Full-screen height */
+    background-attachment: fixed;
+    display: flex; /* Flexbox layout for centering */
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    position: relative; /* For overlay effect */
+    padding-top: 60px; /* Avoid overlap with fixed nav bar */
+    animation: fadeIn 2s ease-in-out; /* Fade-in animation */
+}
+
+/* Hero content styling */
+.hero-content {
+    position: relative; /* For z-index stacking */
+    color: black; /* Black text color */
+    text-align: center; /* Center-align text */
+}
+
+.hero-content h1 {
+    font-size: 3rem; /* Large heading */
+    margin-bottom: 20px; /* Space below the heading */
+    animation: scaleIn 1s ease-in-out; /* Scale-in animation */
+    color: black;
+    opacity: 1;
+}
+
+.hero-content p {
+    font-size: 1.5rem; /* Smaller subheading */
+    animation: scaleIn 1.2s ease-in-out; /* Slight delay on animation */
+}
+
+/* General section styling */
+.section {
+    padding: 80px 20px; /* Spacing inside each section */
+    display: flex; /* Flexbox for layout */
+    align-items: center; /* Center-align items vertically */
+    justify-content: center; /* Center-align items horizontally */
+}
+
+/* White background for specific sections */
+.white-background {
+    background-color: #ffffff;
+}
+
+/* General container for flex layout */
+.container {
+    display: flex; /* Flexbox layout */
+    align-items: center; /* Vertical alignment */
+    max-width: 1400px; /* Maximum width for content */
+    width: 100%; /* Full width */
+    gap: 40px; /* Space between flex items */
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+    padding: 0 20px; /* Padding inside the container */
+    justify-content: center; /* Center-align content */
+}
+
+/* Reversed layout for alternating sections */
+.reverse {
+    flex-direction: row-reverse; /* Reverse the flex direction */
+}
+
+/* Floating image inside sections */
+.floating-image {
+    flex: 1; /* Takes up 1 part of the flex space */
+    min-width: 300px; /* Minimum image size */
+    animation: floatIn 1s ease-in-out; /* Floating animation */
+}
+
+/* Image styling inside floating-image container */
+.floating-image img {
+    width: 100%; /* Full width of the container */
+    max-width: 400px; /* Maximum size of the image */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Box shadow for depth */
+    transition: transform 0.3s ease; /* Smooth hover effect */
+}
+
+/* Hover effect for images (zoom) */
+.floating-image img:hover {
+    transform: scale(1.05); /* Slightly zooms in on hover */
+}
+
+.present-image {
+    flex: 1; /* Takes up 1 part of the flex space */
+    min-width: 300px; /* Minimum image size */
+    animation: floatIn 1s ease-in-out; /* Floating animation */
+    text-align: center;
+}
+
+.present-image img {
+    width: 100%; /* Full width of the container */
+    max-width: 1024px; /* Maximum size of the image */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Box shadow for depth */
+    transition: transform 0.3s ease; /* Smooth hover effect */
+    margin: 0 auto;
+    display: block;
+}
+
+.present-image img:hover {
+    transform: scale(1.05); /* Slightly zooms in on hover */
+    border: orange 2px solid;
+}
+
+/* Content inside sections */
+.content {
+    flex: 2; /* Takes up 2 parts of the flex space */
+    min-width: 300px; /* Minimum width */
+    animation: floatIn 1s ease-in-out; /* Floating animation */
+}
+
+/* Section headings */
+.content h2,
+.content h3 {
+    font-size: 2rem; /* Large font size */
+    margin-bottom: 20px; /* Space below the heading */
+    color: #FF851B; /* Orange accent color */
+    text-align: center; /* Center-align headings */
+}
+
+/* Text in the reversed resume section is centered */
+.resume-section.reverse .content h3,
+.reverse .content h3 {
+    text-align: center;
+}
+
+/* Subheading styling */
+.content h3 {
+    font-size: 1.8rem; /* Smaller subheading */
+    margin-bottom: 10px; /* Space below subheading */
+    color: #FF851B; /* Orange accent */
+}
+
+/* Paragraph text */
+.content p {
+    margin-bottom: 15px; /* Space below paragraph */
+    text-align: justify; /* Justified alignment */
+}
+
+/* Unordered list styling */
+.content ul {
+    list-style-type: disc; /* Bullet points */
+    margin-left: 20px; /* Space on the left */
+    margin-bottom: 15px; /* Space below the list */
+}
+
+/* List item styling */
+.content ul li {
+    margin-bottom: 10px; /* Space between list items */
+    line-height: 1.5; /* Spacing between lines */
+}
+
+/* Links (e.g., buttons) inside content */
+.content a {
+    color: #FF4136; /* Bright red for links */
+    text-decoration: none; /* No underline */
+    transition: transform 0.3s ease; /* Smooth hover effect */
+}
+
+/* Hover effect for links */
+.content a:hover {
+    text-decoration: underline; /* Underline on hover */
+    transform: scale(1.05); /* Slight zoom effect */
+}
+
+/* Resume Sections on Homepage */
+.resume-sections {
+    width: 100%; /* Full width of the section */
+}
+
+/* Individual resume section */
+.resume-section {
+    padding: 60px 0; /* Space inside the section */
+    background-color: #f0f4f8; /* Light-Gray background */
+}
+
+/* Alternating background colors for reversed sections */
+.resume-section.reverse {
+    background-color: #ffffff; /* White background */
+}
+
+/* Flex container inside resume sections */
+.resume-section .container {
+    display: flex; /* Flexbox layout */
+    align-items: center; /* Vertical alignment */
+    gap: 40px; /* Space between items */
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+    padding: 0 20px; /* Padding inside the container */
+    justify-content: center; /* Center-align items */
+}
+
+/* Text content inside the resume sections */
+.resume-section .content {
+    text-align: left; /* Default left alignment */
+}
+
+/* Right-align text for reversed sections */
+.resume-section.reverse .content {
+    text-align: right; /* Text aligned to the right */
+}
+
+/* Subheading in resume sections */
+.resume-section .content h3 {
+    font-size: 1.8rem; /* Font size for subheadings */
+    margin-bottom: 10px; /* Space below subheading */
+    color: #FF851B; /* Orange accent color */
+    text-align: center; /* Center-align subheading */
+}
+
+/* Paragraph text in resume sections */
+.resume-section .content p {
+    margin-bottom: 15px; /* Space below paragraph */
+    align-items: center; /* Center-align text */
+}
+
+/* Button inside resume sections */
+.resume-section .content .bubble {
+    display: block;
+    margin: 0 auto;
+    max-width: fit-content; /* Keep the original width */
+    background-color: #FF4136; /* Red background */
+    color: #FFFFFF; /* White text */
+    padding: 10px 20px; /* Spacing inside the button */
+    border-radius: 20px; /* Rounded corners */
+    text-decoration: none; /* No underline */
+    transition: transform 0.3s ease, background-color 0.3s ease; /* Smooth hover effect */
+    font-weight: bold; /* Bold text */
+}
+
+/* Hover effect for the button */
+.resume-section .content .bubble:hover {
+    transform: scale(1.1); /* Slight zoom on hover */
+    background-color: #e53935; /* Darker red on hover */
+}
+
+.education-page-section {
+    background: url('../images/eduhero.png') no-repeat center center/cover; /* Background image covers the section */
+    height: auto; /* Full-screen height */
+    background-attachment: fixed;
+    display: flex; /* Flexbox layout for centering */
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    position: relative; /* For overlay effect */
+    padding-top: 100px; /* Avoid overlap with fixed nav bar */
+    animation: fadeIn 2s ease-in-out; /* Fade-in animation */
+}
+
+.research-page-section {
+    background-color: white;
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+
+/* Cards for Education Page */
+.card {
+    background-color: #ffffff; /* White background */
+    border: 1px solid orange; /* Light gray border */
+    border-radius: 20px; /* Rounded corners */
+    padding-right: 10px; /* Internal padding */
+    padding-top: 10px;
+    padding-bottom: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effects */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Light box shadow */
+}
+
+.grid-card ul p {
+    text-align: center; /* Center-align text */
+}
+
+/* Hover effect for cards (zoom and shadow) */
+.card:hover {
+    transform: scale(1.02); /* Slight zoom on hover */
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2); /* Stronger shadow on hover */
+}
+
+/* Horizontal card styling */
+.horizontal-card {
+    width: 100%; /* Full width */
+    text-align: center; /* Center-align text */
+    background-color: #001f3f; /* Dark blue background */
+    color: white; /* White text */
+}
+
+/* Subheading in horizontal card */
+.horizontal-card h3 {
+    font-size: 1.8rem; /* Font size for subheading */
+    
+}
+
+/* Paragraph in horizontal card */
+.horizontal-card p {
+    font-size: 1.2rem; /* Font size for paragraph */
+    margin-bottom: 10px; /* Space below paragraph */
+}
+
+/* Grid layout for cards */
+.grid-cards {
+    width: 100%; /* Full width */
+    display: grid; /* Grid layout */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+    gap: 20px; /* Space between grid items */
+}
+
+/* Job and Project Cards */
+.job-card, .project-card {
+    background-color: #ffffff; /* White background */
+    border: 1px solid #e0e0e0; /* Light gray border */
+    border-radius: 10px; /* Rounded corners */
+    padding: 20px; /* Internal padding */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effects */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Light box shadow */
+}
+
+/* Hover effect for job and project cards */
+.job-card:hover, .project-card:hover {
+    transform: scale(1.02); /* Slight zoom on hover */
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2); /* Stronger shadow on hover */
+}
+
+/* Footer */
+footer {
+    background-color: black; /* Black background */
+    color: #FFFFFF; /* White text */
+    padding: 20px 0; /* Space inside the footer */
+    text-align: center; /* Center-align footer text */
+}
+
+/* Links inside the footer */
+.footer-container a {
+    color: #FF4136; /* Red links */
+    text-decoration: none; /* No underline */
+    transition: transform 0.3s ease; /* Smooth hover effect */
+}
+
+/* Hover effect for footer links */
+.footer-container a:hover {
+    text-decoration: underline; /* Underline on hover */
+    transform: scale(1.05); /* Slight zoom on hover */
+}
+
+/* Resume button styling */
+.resume-button {
+    background-color: #FF4136; /* Red background */
+    color: #FFFFFF; /* White text */
+    border: none; /* No border */
+    padding: 10px 20px; /* Internal padding */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth hover effects */
+    font-size: 1rem; /* Font size */
+    border-radius: 5px; /* Rounded corners */
+    display: flex; /* Flexbox for icon and text */
+    align-items: center; /* Aligns icon and text vertically */
+    justify-content: center; /* Center-aligns the content */
+    margin: 10px auto 0; /* Margin and centering */
+    display: block; /* Block display for full-width */
+}
+
+/* Resume button icon */
+.resume-button img {
+    width: 20px; /* Icon width */
+    height: 20px; /* Icon height */
+    margin-right: 10px; /* Space between icon and text */
+}
+
+/* Hover effect for the resume button */
+.resume-button:hover {
+    background-color: #e53935; /* Darker red on hover */
+    transform: scale(1.05); /* Slight zoom on hover */
+}
+
+/* Hamburger Menu Icon */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 4px 0;
+    transition: 0.3s;
+}
+
+
+
+/* Animations */
+
+/* Fade-in effect */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Scale-in effect */
+@keyframes scaleIn {
+    from { transform: scale(0.8); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+/* Floating effect for images */
+@keyframes floatIn {
+    from { transform: translateY(50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+/* Responsive Design (Further media queries) */
+
+/* Mobile phone adjustments */
+@media screen and (max-width: 1100px) {
+
+    .nav-container {
+        position: relative;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-menu {
+        display: none;
+        position: absolute;
+        top: 60px; /* Adjust based on your nav bar height */
+        right: 0;
+        background-color: black;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        padding: 0;
+        margin: 0;
+    }
+
+    .nav-menu li {
+        margin: 0;
+    }
+
+    .nav-menu li a {
+        padding: 15px 0;
+        display: block;
+        width: 100%;
+        color: #fff;
+        border-bottom: 1px solid #444;
+    }
+
+    .nav-menu.active {
+        display: flex; /* Makes the menu visible */
+        position: fixed; /* Sticks it to the side */
+        top: 60px; /* Starts below the nav bar */
+        right: 20px; /* Right-aligned */
+        background-color: #001f3f; /* Dark blue background for the mobile menu */
+        flex-direction: column; /* Stacks menu items vertically */
+        width: 200px; /* Fixed width for the mobile menu */
+        padding: 20px; /* Internal spacing */
+        border-radius: 8px; /* Rounded corners */
+        box-shadow: 0 8px 16px rgba(0,0,0,0.2); /* Adds a shadow for depth */
+    }
+
+    /* Hamburger Menu Animation */
+    .hamburger.active {
+        transform: rotate(90deg); /* Rotates 90 degrees */
+        transition: transform 0.3s ease; /* Smooth rotation */
+    }
+
+    /* Hero text adjustments for mobile */
+    .hero-content h1 {
+        font-size: 2.5rem; /* Smaller heading */
+    }
+
+    .hero-content p {
+        font-size: 1rem; /* Smaller subheading */
+    }
+
+    /* Resume button adjustments for mobile */
+    .resume-button {
+        flex-direction: column; /* Stacks icon and text vertically */
+    }
+
+    .resume-button img {
+        margin-bottom: 5px; /* Space between icon and text */
+    }
+
+    /* Image size adjustments for mobile */
+    .floating-image img {
+        width: 100%; /* Reduce image width for mobile */
+        max-width: none; /* Max width */
+    }
+
+    /* Center-align text for mobile */
+    .content {
+        text-align: left;
+    }
+
+    /* Ensure cards have padding on smaller screens */
+    .horizontal-card, .grid-cards .card {
+        padding: 15px; /* Padding inside cards */
+    }
+}
