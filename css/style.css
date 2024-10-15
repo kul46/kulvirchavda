@@ -36,7 +36,7 @@ nav {
 
 .nav-logo a {
     color: #FFFFFF; /* Logo text color */
-    font-size: 1.8rem; /* Large logo text */
+    font-size: 1.2rem; /* Large logo text */
     font-weight: normal; /* Makes logo bold */
     text-decoration: none; /* Removes underline */
     letter-spacing: 1px; /* Adds space between letters */
@@ -574,9 +574,17 @@ footer {
     }
 
     /* Hamburger Menu Animation */
-    .hamburger.active {
-        transform: rotate(90deg); /* Rotates 90 degrees */
-        transition: transform 0.3s ease; /* Smooth rotation */
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(11px) rotate(45deg);
+    }
+    
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-11px) rotate(-45deg);
     }
 
     /* Hero text adjustments for mobile */
