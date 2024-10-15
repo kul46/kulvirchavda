@@ -492,7 +492,7 @@ footer {
     .hero {
         background: url('../images/Orbital.jpg') no-repeat center center/cover; /* Background image covers the section */
         height: 100vh; /* Full-screen height */
-        background-attachment: fixed;
+        /*background-attachment: fixed;*/
         display: flex; /* Flexbox layout for centering */
         align-items: center; /* Center vertically */
         justify-content: center; /* Center horizontally */
