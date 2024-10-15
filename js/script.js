@@ -30,16 +30,33 @@ smoothScrollLinks.forEach(link => {
 const hamburger = document.getElementById('hamburger');
 const navMenu = document.getElementById('nav-menu');
 
-hamburger.addEventListener('click', () => {
+const toggleMenu = () => {
     hamburger.classList.toggle('active');
     navMenu.classList.toggle('active');
-});
+};
 
+if (hamburger) {
+    hamburger.addEventListener('click', toggleMenu);
+}
+
+// Close menu when clicking on a nav link
 const navLinks = document.querySelectorAll('.nav-menu li a');
 
 navLinks.forEach(link => {
     link.addEventListener('click', () => {
-        hamburger.classList.remove('active');
-        navMenu.classList.remove('active');
+        if (hamburger.classList.contains('active')) {
+            hamburger.classList.remove('active');
+            navMenu.classList.remove('active');
+        }
     });
+});
+
+/* --- Click Outside to Close Menu Functionality --- */
+document.addEventListener('click', (event) => {
+    const isClickInsideMenu = navMenu.contains(event.target);
+    const isClickOnHamburger = hamburger.contains(event.target);
+
+    if (!isClickInsideMenu && !isClickOnHamburger && navMenu.classList.contains('active')) {
+        toggleMenu();
+    }
 });
