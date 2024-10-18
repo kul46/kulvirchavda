@@ -60,3 +60,52 @@ document.addEventListener('click', (event) => {
         toggleMenu();
     }
 });
+
+// Slideshow Functionality
+document.addEventListener('DOMContentLoaded', () => {
+    const slideshows = document.querySelectorAll('.slideshow');
+
+    slideshows.forEach((slideshow, index) => {
+        let slideIndex = 0;
+        const slides = slideshow.querySelectorAll('.slide');
+        const prev = slideshow.parentElement.querySelector('.slideshow-nav .prev');
+        const next = slideshow.parentElement.querySelector('.slideshow-nav .next');
+        const dots = slideshow.parentElement.querySelectorAll('.slideshow-nav .dot');
+
+        // Function to show a specific slide
+        function showSlide(n) {
+            if (n >= slides.length) { slideIndex = 0; }
+            if (n < 0) { slideIndex = slides.length - 1; }
+            slides.forEach(slide => slide.classList.remove('active'));
+            dots.forEach(dot => dot.classList.remove('active-dot'));
+            slides[slideIndex].classList.add('active');
+            if (dots[slideIndex]) dots[slideIndex].classList.add('active-dot');
+        }
+
+        // Show the first slide initially
+        showSlide(slideIndex);
+
+        // Event listeners for navigation buttons
+        if (next) {
+            next.addEventListener('click', () => {
+                slideIndex++;
+                showSlide(slideIndex);
+            });
+        }
+
+        if (prev) {
+            prev.addEventListener('click', () => {
+                slideIndex--;
+                showSlide(slideIndex);
+            });
+        }
+
+        // Event listeners for dots
+        dots.forEach((dot, i) => {
+            dot.addEventListener('click', () => {
+                slideIndex = i;
+                showSlide(slideIndex);
+            });
+        });
+    });
+});

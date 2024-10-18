@@ -152,10 +152,7 @@ nav {
 .floating-image img {
     width: 100%; /* Full width of the container */
     max-width: 400px; /* Maximum size of the image */
-    border-radius: 10px; /* Rounded corners */
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Box shadow for depth */
     transition: transform 0.3s ease; /* Smooth hover effect */
-    border: black 2px solid;
 }
 
 /* Hover effect for images (zoom) */
@@ -492,6 +489,7 @@ footer {
     .hero {
         background: url('../images/Orbital.jpg') no-repeat center center/cover; /* Background image covers the section */
         height: 100vh; /* Full-screen height */
+        /*background-attachment: fixed;*/
         display: flex; /* Flexbox layout for centering */
         align-items: center; /* Center vertically */
         justify-content: center; /* Center horizontally */
@@ -618,5 +616,114 @@ footer {
     /* Ensure cards have padding on smaller screens */
     .horizontal-card, .grid-cards .card {
         padding: 15px; /* Padding inside cards */
+    }
+}
+
+/* Slideshow container */
+.slideshow {
+    position: relative;
+    width: 100%; /* Full width of the parent container */
+    max-width: 400px; /* Adjust as needed */
+    margin: auto;
+    border: 2px solid black; /* Matches existing img border */
+    border-radius: 10px; /* Matches existing img border-radius */
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Matches existing img shadow */
+}
+
+/* Hide the slides by default */
+.slideshow .slide {
+    display: none;
+    width: 100%;
+    height: auto;
+}
+
+/* Show the active slide */
+.slideshow .slide.active {
+    display: block;
+}
+
+/* Images and videos inside slides */
+.slideshow .slide img,
+.slideshow .slide video {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Navigation Box */
+.slideshow-nav {
+    display: flex;
+    justify-content: space-between; /* Align prev to left, next to right */
+    align-items: center;
+    margin-top: 5px; /* Space above the navigation box */
+    padding: 3px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    border: black solid 2px;
+}
+
+/* Navigation buttons */
+.slideshow-nav .prev,
+.slideshow-nav .next {
+    cursor: pointer;
+    padding: 6px 12px; /* Adjust padding for button size */
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none; /* Remove default border */
+    border-radius: 100%; /* Make buttons circular */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.7; /* Slight transparency */
+}
+
+/* Hover effects for navigation buttons */
+.slideshow-nav .prev:hover,
+.slideshow-nav .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+    transform: scale(1.1); /* Slightly enlarge on hover */
+    opacity: 1; /* Fully opaque on hover */
+}
+
+/* Dots (indicators) */
+.slideshow-nav .dots {
+    display: flex;
+    gap: 5px; /* Space between dots */
+}
+
+.slideshow-nav .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.slideshow-nav .active-dot,
+.slideshow-nav .dot:hover {
+    background-color: #FF4136;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 600px) {
+    .slideshow {
+        max-width: 100%;
+    }
+
+    .slideshow-nav .prev,
+    .slideshow-nav .next {
+        padding: 6px 10px;
+        font-size: 16px;
+    }
+
+    .slideshow-nav .dot {
+        height: 12px;
+        width: 12px;
     }
 }
