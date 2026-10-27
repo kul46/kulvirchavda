@@ -1,0 +1,82 @@
+[
+  {
+    "title": "Project NOMORA",
+    "url": "nomora.html",
+    "category": "research robotics"
+  },
+  {
+    "title": "Stratos Aircraft",
+    "url": "work.html#stratos",
+    "category": "industry"
+  },
+  {
+    "title": "Adani Defence & Aerospace",
+    "url": "work.html#adani",
+    "category": "industry"
+  },
+  {
+    "title": "N-ACXIS Lab",
+    "url": "research.html#nacxis",
+    "category": "research robotics"
+  },
+  {
+    "title": "Rocket trajectory modeling",
+    "url": "research.html#rocket-paper",
+    "category": "research"
+  },
+  {
+    "title": "MAero technical projects",
+    "url": "projects.html#maero",
+    "category": "leadership robotics"
+  },
+  {
+    "title": "Vertically landed rocket",
+    "url": "projects.html#rocket-lander",
+    "category": "robotics"
+  },
+  {
+    "title": "Planetary aerial systems",
+    "url": "projects.html#ipasc",
+    "category": "robotics"
+  },
+  {
+    "title": "L1 model rocket",
+    "url": "projects.html#l1-rocket",
+    "category": "hardware"
+  },
+  {
+    "title": "Indoor skydiving robot",
+    "url": "projects.html#indoor-flight",
+    "category": "robotics leadership"
+  },
+  {
+    "title": "Falcon 9 CAD model",
+    "url": "projects.html#falcon-cad",
+    "category": "hardware"
+  },
+  {
+    "title": "Home solar design",
+    "url": "projects.html#home-solar",
+    "category": "hardware"
+  },
+  {
+    "title": "LASSI propulsion research",
+    "url": "research.html#lassi",
+    "category": "research"
+  },
+  {
+    "title": "Aerospace STEM outreach",
+    "url": "work.html#outreach",
+    "category": "leadership"
+  },
+  {
+    "title": "S.T.A.R. avionics internship",
+    "url": "work.html#star",
+    "category": "industry hardware"
+  },
+  {
+    "title": "Cosmological",
+    "url": "research.html#cosmological",
+    "category": "writing"
+  }
+]

@@ -1,263 +1,371 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Research | Kulvir Jaydeep Chavda</title>
-
-    <!-- Favicon and App Icons -->
-    <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
-    <link rel="manifest" href="icons/site.webmanifest">
-    <link rel="shortcut icon" href="icons/favicon.ico">
-    <meta name="msapplication-TileColor" content="#000000">
-    <meta name="msapplication-config" content="icons/browserconfig.xml">
-    <meta name="theme-color" content="#000000">
-
-    <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;700&display=swap" rel="stylesheet">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><title>Research &amp; Writing | Kulvir Chavda</title>
+<meta name="description" content="Field robotics at CMU, autonomy research at N-ACXIS, an AIAA rocket trajectory paper, LASSI propulsion research, and Cosmological science writing.">
+<meta name="theme-color" content="#f4f2eb">
+<link rel="canonical" href="https://kulvirchavda.com/research.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Research &amp; Writing | Kulvir Chavda">
+<meta property="og:description" content="Field robotics at CMU, autonomy research at N-ACXIS, an AIAA rocket trajectory paper, LASSI propulsion research, and Cosmological science writing.">
+<meta property="og:url" content="https://kulvirchavda.com/research.html">
+<meta property="og:image" content="https://kulvirchavda.com/images/optimized/portrait.webp">
+<meta property="og:image:alt" content="Kulvir Chavda with his AIAA student conference award">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="icons/mark.svg" type="image/svg+xml">
+<link rel="alternate icon" href="icons/favicon.ico">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<link rel="manifest" href="icons/site.webmanifest">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/portfolio.css">
+<script src="js/script.js" defer>
+</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Person", "name": "Kulvir Jaydeep Chavda", "url": "https://kulvirchavda.com/", "jobTitle": "Robotics graduate student", "affiliation": {"@type": "CollegeOrUniversity", "name": "Carnegie Mellon University"}, "sameAs": ["https://github.com/kul46", "https://www.linkedin.com/in/kulvirchavda"]}
+</script>
 </head>
-<body>
-    <!-- Navigation Bar -->
-    <nav>
-        <div class="nav-container">
-            <!-- Logo linking to the hero section -->
-            <div class="nav-logo">
-                <a href="index.html">Kulvir Chavda</a>
-            </div>
+<body><a href="#main" class="skip-link">Skip to content</a>
+<header class="site-header">
+<nav class="nav wrap" aria-label="Main navigation"><a class="brand" href="index.html" aria-label="Kulvir Chavda home"><img src="icons/mark.svg" alt="" width="35" height="35">Kulvir Chavda<span style="color:var(--orange)">.</span></a><button class="menu-toggle" type="button" aria-expanded="false" aria-controls="navigation">Menu +</button>
+<div class="nav-links" id="navigation"><a href="projects.html">Projects</a><a href="research.html" aria-current="page">Research</a><a href="work.html">Experience</a><a href="education.html">About</a><a href="files/cv.pdf">CV ↗</a><a class="nav-contact" href="#contact">Contact <span aria-hidden="true">↗</span></a>
+</div>
+</nav>
+</header>
+<main id="main">
+<div class="wrap">
+<header class="page-intro">
+<p class="eyebrow">Research / Publications / Writing
+</p>
+<h1>Robotics and<br>experimental aerospace.
+</h1>
+<p>I currently work on field robotics at Carnegie Mellon. My earlier research covered autonomous systems, rocket trajectory modeling, and space propulsion.
+</p>
+</header>
+<article class="feature research-feature"><a class="feature-visual" href="nomora.html" aria-label="About Project NOMORA">
+<svg class="mission-svg" viewBox="0 0 660 470" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Concept diagram of a surface vessel supporting a robot that explores coastal terrain by ground and air. Not a simulation result.">
+<defs>
 
-             <!-- Hamburger icon (visible on narrow window) -->
-            <div class="hamburger" id="hamburger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
+<pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+<path d="M32 0H0V32" fill="none" stroke="#b6ccc3" stroke-opacity=".1" stroke-width=".6"/>
+</pattern>
 
-            <!-- Navigation menu for desktop -->
-            <ul class="nav-menu" id="nav-menu">
-                <li><a href="index.html#about">About Me</a></li>
-                <li><a href="education.html">Education, Skills & Courses</a></li>
-                <li><a href="work.html">Work Experience</a></li>
-                <li><a href="projects.html">Engineering Projects</a></li>
-                <li><a href="research.html">Research</a></li>
-                <li><a href="#contact">Get in Touch!</a></li>
-            </ul>
-        </div>
-    </nav>
+<pattern id="sea" width="20" height="20" patternUnits="userSpaceOnUse">
+<path d="M0 10h6m7 0h2" stroke="#91b3b0" stroke-opacity=".23" stroke-width="1"/>
+</pattern>
 
-    <!-- Research & Writing Page Section -->
-
-    <section class="section research-page-section" style="padding-top: 100px;">
-        <div class="container">
-
-            <div class="floating-image">
-                <div class="slideshow">
-                    <div class="slide active">
-                        <img src="images/ACXIS/N-ACXIS.jpg" alt="Aerospace Engineering Intern"></img>
-                    </div>
-                    <div class="slide active">
-                        <video src="videos/NACXIS/Crazyflie_maze1.mp4" controls></video>
-                    </div>
-                    <div class="slide active">
-                        <img src="images/ACXIS/Acxis-1.png" alt="Aerospace Engineering Intern">
-                    </div>
-                    <div class="slide active">
-                        <img src="images/ACXIS/Crazyflie-1.jpg" alt="Aerospace Engineering Intern">
-                    </div>
-                </div>
-                <!-- Navigation Box -->
-                <div class="slideshow-nav">
-                    <a class="prev" aria-label="Previous Slide">&#10094;</a>
-                    <div class="dots">
-                        <span class="dot active-dot"></span>
-                        <span class="dot"></span>
-                        <span class="dot"></span>
-                        <span class="dot"></span>
-                    </div>
-                    <a class="next" aria-label="Next Slide">&#10095;</a>
-                </div>
-            </div> 
-
-            <div class="content">
-                <div class="research">
-                    <h3 style="color: black;">Undergraduate Researcher – GNC, Autonomous/Embedded Systems, & Test Design</h3>
-                    <p><strong>November 2024 – Present</strong></p>
-                    <h4>Non-Linear Autonomous Control, Exploration, Intelligence & Systems Lab (N-ACXIS), UIUC</h4>
-                    <ul>
-                        <li>Develop 3 real-time experiments to validate 3D Guidance, Navigation and Control (GNC) algorithms, integrated with machine learning, for swarms of heterogeneous UAVs navigating unmapped, GPS-denied environments.</li>
-                        <li>Implement ROS2/Python based autonomy stack integrating SLAM, multi-agent coordination, and robust obstacle avoidance on 3+ UAVs & Ground based robots.</li>
-                        <li>Utilizie the Qualisys Motion Capture System & On-board SLAM in robots at the UIUC drone research lab.</li>
-                        <li>Simulate and optimize nonlinear flight dynamics using LQR, PID, and Robust Control techniques in Python and Simulink.</li>
-                        <li>Design and execute full experimental pipeline from control law modeling to log analysis and performance evaluation.</li>
-                        <li>Preparing weekly technical presentations to keep Dr. Tsukamoto updated on progress and further plans.</li>
-                        <li><a href="https://hirotsukamoto.com/" target="_blank">Read about us...</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="section research-page-section">
-        <div class="container">
-
-            <div class="floating-image">
-                <div class="slideshow">
-                    <div class="slide active">
-                        <img src="images/AiaaAkron/Aiaa3.jpg" alt="Aerospace Engineering Intern">
-                    </div>
-                    <div class="slide active">
-                        <img src="images/AiaaAkron/testing.jpg" alt="Aerospace Engineering Intern">
-                    </div>
-                    <div class="slide">
-                        <img src="images/AiaaAkron/Aiaa4.JPG" alt="Aerospace Engineering Intern">
-                    </div>
-                    <div class="slide">
-                        <img src="images/AiaaAkron/Aiaa2.jpg" alt="Aerospace Engineering Intern">
-                    </div>
-                    <div class="slide">
-                        <video src="videos/AiaaAkron/AiaaAward.mp4" controls></video>
-                    </div>
-                </div>
-                <!-- Navigation Box -->
-                <div class="slideshow-nav">
-                    <a class="prev" aria-label="Previous Slide">&#10094;</a>
-                    <div class="dots">
-                        <span class="dot active-dot"></span>
-                        <span class="dot"></span>
-                        <span class="dot"></span>
-                        <span class="dot"></span>
-                        <span class="dot"></span>
-                    </div>
-                    <a class="next" aria-label="Next Slide">&#10095;</a>
-                </div>
-            </div> 
-
-            <div class="content">
-                <div class="research">
-                    <h3 style="color: black;">Undergraduate Researcher & First Author – Numerical Methods & Data Analysis</h3>
-                    <p><strong>May 2023 – May 2024</strong></p>
-                    <h4>Title (Published as a winning conference paper by AIAA):</h4>
-                    <h4>Using the Drag Equation and Euler’s Method in Python to Predict Model Rocket Flight Trajectories</h4>
-                    <ul>
-                        <li>Utilized rocket flight data (24 flights), thrust tests, & Python to write an algorithm that predicts accurate rocket trajectories.</li>
-                        <li>Conducted 25+ solid rocket-motor thrust tests to create accurate theoretical thrust curves to plug into python algorithms.</li>
-                        <li>Designed the algorithm structure and developed a Python application with a GUI (Graphical User Interface) to take user input and output graphs depicting altitude vs. time and drag force vs. time for the model rocket, both with and without drag.</li>
-                        <li>Gained approval from the university to submit an abstract to the 2024 AIAA Region III Conference, and got accepted.</li>
-                        <li>Wrote a paper and polished it over 6 months with advice from Heather Arnett (STEM Advisor) and my professors.</li>
-                        <li>Prepared detailed schematics and visuals for my conference presentation and delivered a 30-minute talk on the same.</li>
-                        <li>Paper was awarded 3rd place at the conference in April 2024, and was published on AIAAs Arc platform in July 2024.</li>
-                        <li><a href="https://doi.org/10.2514/6.2024-84150" target="_blank">Read Publication...</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="section research-page-section">
-        <div class="container">
-
-            <div class="floating-image">
-                <div class="slideshow">
-                    <div class="slide active">
-                        <img src="images/LASSI/LASSI.png" alt="Aerospace Engineering Intern">
-                    </div>
-                    <div class="slide">
-                        <img src="images/LASSI/LASSI2.jpg" alt="Aerospace Engineering Intern">
-                    </div>
-                </div>
-                <!-- Navigation Box -->
-                <div class="slideshow-nav">
-                    <a class="prev" aria-label="Previous Slide">&#10094;</a>
-                    <div class="dots">
-                        <span class="dot active-dot"></span>
-                        <span class="dot"></span>
-                    </div>
-                    <a class="next" aria-label="Next Slide">&#10095;</a>
-                </div>
-            </div> 
-
-            <div class="content">
-                <div class="research">
-                    <h3 style="color: black;">Undergraduate Research Student</h3>
-                    <p><strong>Jan 2024 - May 2024</strong></p>
-                    <h4>Laboratory of Advanced Space Systems at Illinois</h4>
-                    <ul>
-                        <li>Trained & certified to use 3D printers, thermal vac chamber, solar simulator, soldering machines, and other lab equipment.</li>
-                        <li>Assisted in the foundational design & development of a zero-gravity Chemical-Electrospray propellant dual-feed system.</li>
-                        <li>Prepared detailed engineering requirements documentation by working closely with PhD students and fellow undergrads.</li>
-                        <li>Accounted for material and instrumentation requirements to prepare a list of parts for the dual-feed system within 2 weeks.</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="section research-page-section">
-        <div class="container">
-
-            <div class="floating-image">
-                <div class="slideshow">
-                    <div class="slide active">
-                        <img src="images/Cosmological/cosmological.png" alt="Aerospace Engineering Intern">
-                    </div>
-                    <div class="slide">
-                        <img src="images/Cosmological/cosmological2.png" alt="Aerospace Engineering Intern">
-                    </div>
-                    <div class="slide active">
-                        <img src="images/Cosmological/cosmological3.png" alt="Aerospace Engineering Intern">
-                    </div>
-                    <div class="slide">
-                        <img src="images/Cosmological/cosmological4.png" alt="Aerospace Engineering Intern">
-                    </div>
-                </div>
-                <!-- Navigation Box -->
-                <div class="slideshow-nav">
-                    <a class="prev" aria-label="Previous Slide">&#10094;</a>
-                    <div class="dots">
-                        <span class="dot active-dot"></span>
-                        <span class="dot"></span>
-                        <span class="dot"></span>
-                        <span class="dot"></span>
-                    </div>
-                    <a class="next" aria-label="Next Slide">&#10095;</a>
-                </div>
-            </div> 
-
-            <div class="content">
-                <div class="research">
-                    <h3 style="color: black;">How it Started...</h3>
-                    <p><strong>Jan 2019 - Present</strong></p>
-                    <h4>Founder, Writer, and Site Administrator - COSMOLOGICAL</h4>
-                    <ul>
-                        <li>Fell in love with physics and space exploration by the time I reached middle school.</li>
-                        <li>Heard about the Feynman Method of learning and created a wordpress blog to spread my love for space.</li>
-                        <li>Over the course of a few years, started taking on more challenging topics and customized by blog into a website where discussions could take place.</li>
-                        <li>Give it a visit: <a href="https://www.cosmological.in" target="_blank">www.cosmological.in</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <div class="footer-container">
-            <!-- Footer contact info -->
-            <h3 style="padding-bottom: 10px;">Get in Touch!</h3>
-            <p>Email: <a href="mailto:chavdakulvir@gmail.com">chavdakulvir@gmail.com</a></p>
-            <p>Phone: +1 (447) 902-1541</p>
-            <p>LinkedIn: <a href="https://www.linkedin.com/in/kulvirchavda">www.linkedin.com/in/kulvirchavda</a></p>
-            <p style="padding-bottom: 10px;">Location: Champaign, Illinois, USA</p>
-            
-            <!-- Button linking to the resume (PDF) -->
-            <button onclick="window.location.href='files/cv.pdf'" class="resume-button">
-                <img src="images/resume-icon.png" alt="Resume Icon"> View CV
-            </button>
-        </div>
-    </footer>
-
-    <script src="js/script.js"></script>
+<linearGradient id="land" x1="0" x2="1" y2="1"><stop stop-color="#c2c9a6"/><stop offset="1" stop-color="#6f8970"/>
+</linearGradient>
+</defs>
+<rect width="660" height="470" fill="#203d3b"/>
+<rect width="660" height="470" fill="url(#grid)"/>
+<path d="M0 0H660V470H0Z" fill="url(#sea)"/>
+<path d="M262-20C225 48 285 58 264 111S192 160 232 214 196 286 256 324 258 414 225 490H680V-20Z" fill="url(#land)"/>
+<g fill="none" stroke="#e7e8ca" stroke-width="1" opacity=".46">
+<path d="M276-20C239 48 301 57 279 114S212 161 248 214 215 283 273 323 277 414 244 490"/>
+<path d="M294-20C262 48 322 60 297 119S231 166 268 218 237 288 294 324 298 416 265 490"/>
+<path d="M319-20C286 49 347 66 324 121S255 177 294 222 267 290 320 329 324 414 295 490"/>
+<path d="M351-20C319 44 383 63 356 126S295 180 327 227 306 293 352 331 365 414 336 490"/>
+<path d="M392-20C360 44 427 63 402 131S349 178 371 230 351 296 398 334 407 415 389 490"/>
+<path d="M442-20C424 38 473 76 456 131S407 185 424 240 417 295 452 334 465 421 449 490"/>
+<path d="M492-20C485 48 532 75 516 138S474 190 486 241 481 300 506 340 527 429 514 490"/>
+<path d="M551-20C543 45 593 89 580 149S541 198 548 250 546 306 567 350 583 430 578 490"/>
+<path d="M612-20C603 45 652 94 646 149S603 198 612 250 608 306 631 350 645 430 641 490"/>
+</g>
+<path d="M271-20C234 48 294 58 273 111S201 160 241 214 205 286 265 324 267 414 234 490" fill="none" stroke="#e9dfb8" stroke-width="4" opacity=".85"/>
+<g stroke="#dce4cb" fill="none" opacity=".7">
+<path d="M535 326v-26m-13 13h26"/>
+<circle cx="535" cy="313" r="25"/>
+<circle cx="535" cy="313" r="44" stroke-dasharray="2 6"/>
+</g>
+<path class="route surface" d="M96 348Q124 318 185 298T253 278" fill="none" stroke="#a5d6d6" stroke-width="2" stroke-dasharray="5 6"/>
+<path class="route ground" d="M253 278L291 256 318 263 346 231 370 221" fill="none" stroke="#f8f3d9" stroke-width="3"/>
+<path class="route air" d="M370 221Q421 67 526 155T535 313" fill="none" stroke="#e6a06c" stroke-width="2.5" stroke-dasharray="7 5"/>
+<g fill="#f7efce">
+<circle cx="253" cy="278" r="5"/>
+<circle cx="318" cy="263" r="3"/>
+<circle cx="370" cy="221" r="5"/>
+<circle cx="535" cy="313" r="5"/>
+</g>
+<g transform="translate(115 328) rotate(30)">
+<path d="M-13-20H13L17 12 0 25-17 12Z" fill="#eceddd" stroke="#203d3b" stroke-width="2"/>
+<rect x="-8" y="-10" width="16" height="20" rx="2" fill="#50716a"/>
+<path d="M0-25v-12" stroke="#eceddd" stroke-width="2"/>
+</g>
+<g transform="translate(451 137) rotate(-15)" stroke="#f5ead0" stroke-width="2" fill="#203d3b">
+<path d="M-16-12 16 12m-32 0 32-24"/>
+<circle cx="-17" cy="-13" r="10"/>
+<circle cx="17" cy="13" r="10"/>
+<circle cx="-17" cy="13" r="10"/>
+<circle cx="17" cy="-13" r="10"/>
+<rect x="-6" y="-9" width="12" height="18" rx="3" fill="#d97e4d"/>
+</g>
+<g font-family="monospace" font-size="10" letter-spacing="1"><text x="48" y="397" fill="#bfdbd5">01 / SURFACE CARRIER</text><text x="278" y="305" fill="#1e3832">02 / GROUND</text><text x="473" y="112" fill="#f2edd7">03 / AIR</text><text x="465" y="381" fill="#1e3832">UNKNOWN TERRAIN</text>
+</g>
+<g transform="translate(49 47)" stroke="#c7d9cc" fill="none">
+<path d="M0 32V0L-4 8m4-8 4 8M-8 25H8"/><text x="-3" y="-9" fill="#c7d9cc" stroke="none" font-family="monospace" font-size="9">N</text>
+</g>
+<text x="463" y="440" font-family="monospace" font-size="9" fill="#243f34" letter-spacing="1">CONCEPT / NOT TO SCALE</text>
+</svg></a>
+<div class="feature-content">
+<p class="eyebrow"><span class="dot"></span>CMU / 2026-present
+</p>
+<h3>Project NOMORA
+</h3>
+<p>Research with Prof. Matt Travers on hybrid ground-air robots for coastal exploration.
+</p><a href="nomora.html" class="text-link">Project brief ↗</a>
+</div>
+</article>
+<nav class="section-index" aria-label="Research sections"><a href="#nacxis">N-ACXIS Lab<span aria-hidden="true">↓</span></a><a href="#rocket-paper">AIAA paper<span aria-hidden="true">↓</span></a><a href="#lassi">LASSI<span aria-hidden="true">↓</span></a><a href="#cosmological">Cosmological<span aria-hidden="true">↓</span></a>
+</nav>
+<article class="case" id="nacxis">
+<div class="case-head">
+<div class="case-meta">
+<p class="eyebrow">Undergraduate Researcher
+</p>
+<p>Nov 2024 - Mar 2026
+</p>
+<p>UIUC · Advisor: Dr. Hiroyasu Tsukamoto
+</p>
+</div>
+<div class="case-title">
+<h2>N-ACXIS Lab
+</h2>
+<p class="lead">Guidance, autonomous and embedded systems, and experiment design for UAVs and ground robots.
+</p>
+</div>
+</div>
+<div class="case-body">
+<figure><img class="case-image" src="images/optimized/autonomy.webp" alt="Kulvir operating a quadrotor indoors" loading="lazy" width="900" height="750">
+</figure>
+<div class="case-copy">
+<h3>My work
+</h3>
+<ul>
+<li>Developed physical and simulated experiments to validate 3D guidance and control for heterogeneous UAV swarms in unmapped, GPS-denied environments.
+</li>
+<li>Implemented ROS 2 and Python autonomy combining SLAM, multi-agent coordination, and obstacle avoidance across three or more UAVs and ground robots.
+</li>
+<li>Used Qualisys motion capture and onboard SLAM during robot experiments.
+</li>
+<li>Simulated nonlinear flight dynamics and worked with LQR, PID, and robust control methods.
+</li>
+<li>Followed experiments from control-law modeling through log analysis and performance evaluation, presenting progress to my advisor.
+</li>
+</ul><a class="text-link" href="https://hirotsukamoto.com/">Lab website ↗</a>
+<div class="tags"><span class="tag">ROS 2</span><span class="tag">SLAM</span><span class="tag">Controls</span>
+</div>
+</div>
+</div>
+<figure class="video-panel" id="video-quadrotor-maze"><video controls playsinline preload="none" poster="images/optimized/quadrotor-maze.jpg" aria-label="Quadrotor maze demonstration"><source src="videos/optimized/quadrotor-maze.mp4" type="video/mp4">Your browser does not support this video.</video>
+<figcaption><strong>Quadrotor maze demonstration</strong>
+<p>An indoor quadrotor demonstration from my autonomy work.
+</p><button type="button" class="video-play" data-video="video-quadrotor-maze" hidden>Play video</button><span class="video-status" role="status"></span>
+</figcaption>
+</figure>
+<details class="gallery-disclosure">
+<summary>Photos &amp; figures <span>(2)</span>
+</summary>
+<div class="media-gallery">
+<figure><button type="button" class="gallery-image" data-image="images/ACXIS/N-ACXIS.jpg" data-caption="N-ACXIS research" aria-label="Enlarge N-ACXIS research"><img src="images/ACXIS/N-ACXIS.jpg" alt="N-ACXIS research" loading="lazy"><span aria-hidden="true">+</span></button>
+<figcaption>N-ACXIS research
+</figcaption>
+</figure>
+<figure><button type="button" class="gallery-image" data-image="images/ACXIS/Crazyflie-1.jpg" data-caption="Indoor quadrotor demonstration" aria-label="Enlarge Indoor quadrotor demonstration"><img src="images/ACXIS/Crazyflie-1.jpg" alt="Indoor quadrotor demonstration" loading="lazy"><span aria-hidden="true">+</span></button>
+<figcaption>Indoor quadrotor demonstration
+</figcaption>
+</figure>
+</div>
+</details>
+</article>
+<article class="case" id="rocket-paper">
+<div class="case-head">
+<div class="case-meta">
+<p class="eyebrow">Undergraduate Researcher & First Author
+</p>
+<p>May 2023 - May 2024
+</p>
+<p>UIUC · Advisor: Heather Arnett<br>Secondary advisor: Dr. Joshua L. Rovey
+</p>
+</div>
+<div class="case-title">
+<h2>Rocket trajectory modeling
+</h2>
+<p class="lead">Using the Drag Equation and Euler’s Method in Python to Predict Model Rocket Flight Trajectories.
+</p>
+</div>
+</div>
+<div class="case-body">
+<figure><img class="case-image" src="images/optimized/flight-test.webp" alt="Outdoor motor thrust test setup" loading="lazy" width="900" height="750">
+</figure>
+<div class="case-copy">
+<h3>Experiment and model
+</h3>
+<p>I developed a Python trajectory simulation using 24 flight tests and more than 25 solid rocket-motor thrust tests. The model achieved less than 4% error in the evaluated flights.
+</p>
+<p>I also built a graphical interface for plotting altitude and drag force over time, with and without drag. Over six months, I developed the paper with advisor feedback and prepared a 30-minute conference presentation.
+</p>
+<h3>Publication
+</h3>
+<p>Chavda, K. J., &amp; Arnett, H. R. (2024). <em>Using the Drag Equation and Euler’s Method in Python to Predict Model Rocket Flight Trajectories.</em> AIAA Region III Student Conference, Akron, Ohio. Paper AIAA 2024-84150.
+</p>
+<p>The paper received third place in the undergraduate category in April 2024 and was published on AIAA’s ARC platform in July.
+</p><a class="text-link" href="https://doi.org/10.2514/6.2024-84150">Read the paper ↗</a>
+</div>
+</div>
+<figure class="video-panel" id="video-aiaa-award"><video controls playsinline preload="none" poster="images/optimized/aiaa-award.jpg" aria-label="AIAA Region III award"><source src="videos/optimized/aiaa-award.mp4" type="video/mp4">Your browser does not support this video.</video>
+<figcaption><strong>AIAA Region III award</strong>
+<p>Third place in the undergraduate category at the 2024 student conference.
+</p><button type="button" class="video-play" data-video="video-aiaa-award" hidden>Play video</button><span class="video-status" role="status"></span>
+</figcaption>
+</figure>
+<details class="gallery-disclosure">
+<summary>Photos &amp; figures <span>(3)</span>
+</summary>
+<div class="media-gallery">
+<figure><button type="button" class="gallery-image" data-image="images/AiaaAkron/Aiaa2.jpg" data-caption="AIAA student conference" aria-label="Enlarge AIAA student conference"><img src="images/AiaaAkron/Aiaa2.jpg" alt="AIAA student conference" loading="lazy"><span aria-hidden="true">+</span></button>
+<figcaption>AIAA student conference
+</figcaption>
+</figure>
+<figure><button type="button" class="gallery-image" data-image="images/AiaaAkron/Aiaa4.JPG" data-caption="Conference presentation" aria-label="Enlarge Conference presentation"><img src="images/AiaaAkron/Aiaa4.JPG" alt="Conference presentation" loading="lazy"><span aria-hidden="true">+</span></button>
+<figcaption>Conference presentation
+</figcaption>
+</figure>
+<figure><button type="button" class="gallery-image" data-image="images/AiaaAkron/Aiaa3.jpg" data-caption="AIAA third-place award" aria-label="Enlarge AIAA third-place award"><img src="images/AiaaAkron/Aiaa3.jpg" alt="AIAA third-place award" loading="lazy"><span aria-hidden="true">+</span></button>
+<figcaption>AIAA third-place award
+</figcaption>
+</figure>
+</div>
+</details>
+</article>
+<article class="case" id="lassi">
+<div class="case-head">
+<div class="case-meta">
+<p class="eyebrow">Undergraduate Research Student
+</p>
+<p>Jan - May 2024
+</p>
+<p>University of Illinois
+</p>
+</div>
+<div class="case-title">
+<h2>Laboratory of Advanced Space Systems at Illinois
+</h2>
+<p class="lead">Foundational design work on a chemical-electrospray propellant dual-feed system for zero-gravity operation.
+</p>
+</div>
+</div>
+<div class="case-body">
+<figure><img class="case-image" src="images/optimized/lassi.webp" alt="Research notes on fluid behavior and propulsion feed-system design" loading="lazy" width="900" height="750">
+</figure>
+<div class="case-copy">
+<h3>My work
+</h3>
+<p>I worked with PhD students and fellow undergraduates to prepare engineering requirements and identify the system’s material and instrumentation needs. I assembled a parts list for the dual-feed system within two weeks.
+</p>
+<p>I also trained and was certified to use laboratory equipment including 3D printers, a thermal-vacuum chamber, a solar simulator, and soldering equipment.
+</p>
+<div class="tags"><span class="tag">Space propulsion</span><span class="tag">Requirements</span><span class="tag">Laboratory work</span>
+</div>
+</div>
+</div>
+<details class="gallery-disclosure">
+<summary>Photos &amp; figures <span>(2)</span>
+</summary>
+<div class="media-gallery">
+<figure><button type="button" class="gallery-image" data-image="images/LASSI/LASSI.png" data-caption="Space systems research project board" aria-label="Enlarge Space systems research project board"><img src="images/LASSI/LASSI.png" alt="Space systems research project board" loading="lazy"><span aria-hidden="true">+</span></button>
+<figcaption>Space systems research project board
+</figcaption>
+</figure>
+<figure><button type="button" class="gallery-image" data-image="images/LASSI/LASSI2.jpg" data-caption="Feed-system research notes" aria-label="Enlarge Feed-system research notes"><img src="images/LASSI/LASSI2.jpg" alt="Feed-system research notes" loading="lazy"><span aria-hidden="true">+</span></button>
+<figcaption>Feed-system research notes
+</figcaption>
+</figure>
+</div>
+</details>
+</article>
+<article class="case" id="cosmological">
+<div class="case-head">
+<div class="case-meta">
+<p class="eyebrow">Founder, Writer & Site Administrator
+</p>
+<p>Started January 2019
+</p>
+<p>Independent science writing
+</p>
+</div>
+<div class="case-title">
+<h2>Cosmological
+</h2>
+<p class="lead">A website I started to write about physics and space while I was in school.
+</p>
+</div>
+</div>
+<div class="case-body">
+<figure><img class="case-image" src="images/optimized/cosmological.webp" alt="A Cosmological article about interstellar civilizations" loading="lazy" width="900" height="750">
+</figure>
+<div class="case-copy">
+<h3>Learning by explaining
+</h3>
+<p>I had become interested in physics and space exploration by middle school. After learning about the Feynman method, I started a WordPress blog to explain what I was learning.
+</p>
+<p>Over time, I took on more challenging topics and customized the blog into a website where readers could discuss the ideas. Writing gave me a reason to work through a subject carefully enough to explain it.
+</p>
+<div class="tags"><span class="tag">Science writing</span><span class="tag">Web development</span>
+</div>
+</div>
+</div>
+<details class="gallery-disclosure">
+<summary>Photos &amp; figures <span>(4)</span>
+</summary>
+<div class="media-gallery">
+<figure><button type="button" class="gallery-image" data-image="images/Cosmological/cosmological.png" data-caption="Cosmological website" aria-label="Enlarge Cosmological website"><img src="images/Cosmological/cosmological.png" alt="Cosmological website" loading="lazy"><span aria-hidden="true">+</span></button>
+<figcaption>Cosmological website
+</figcaption>
+</figure>
+<figure><button type="button" class="gallery-image" data-image="images/Cosmological/cosmological2.png" data-caption="Interstellar civilizations article" aria-label="Enlarge Interstellar civilizations article"><img src="images/Cosmological/cosmological2.png" alt="Interstellar civilizations article" loading="lazy"><span aria-hidden="true">+</span></button>
+<figcaption>Interstellar civilizations article
+</figcaption>
+</figure>
+<figure><button type="button" class="gallery-image" data-image="images/Cosmological/cosmological3.png" data-caption="Cosmological science writing" aria-label="Enlarge Cosmological science writing"><img src="images/Cosmological/cosmological3.png" alt="Cosmological science writing" loading="lazy"><span aria-hidden="true">+</span></button>
+<figcaption>Cosmological science writing
+</figcaption>
+</figure>
+<figure><button type="button" class="gallery-image" data-image="images/Cosmological/cosmological4.png" data-caption="Cosmological article page" aria-label="Enlarge Cosmological article page"><img src="images/Cosmological/cosmological4.png" alt="Cosmological article page" loading="lazy"><span aria-hidden="true">+</span></button>
+<figcaption>Cosmological article page
+</figcaption>
+</figure>
+</div>
+</details>
+</article>
+</div>
+</main>
+<footer class="contact" id="contact">
+<div class="wrap">
+<div class="contact-top">
+<div>
+<p class="eyebrow"><span class="dot"></span>Contact
+</p>
+<h2>Get in touch.
+</h2>
+</div>
+<div>
+<p>For research collaborations, engineering opportunities, or a project you’d like to discuss.
+</p>
+<div class="actions"><a class="button" href="mailto:chavdakulvir@gmail.com">Email me <span aria-hidden="true">↗</span></a><button class="copy-email" type="button" hidden>Copy email</button>
+</div><span class="contact-status" role="status" aria-live="polite"></span>
+</div>
+</div>
+<div class="footer-bottom"><span>© 2026 Kulvir Jaydeep Chavda · Pittsburgh, PA</span>
+<div class="footer-links"><a href="https://www.linkedin.com/in/kulvirchavda">LinkedIn ↗</a><a href="https://github.com/kul46">GitHub ↗</a><a href="files/cv.pdf">CV · Aug 2026 ↗</a><a href="#main">Back to top ↑</a>
+</div>
+</div>
+</div>
+</footer><dialog id="image-viewer" aria-labelledby="image-caption">
+<div class="viewer-toolbar">
+<p id="image-caption">
+</p><button type="button" class="viewer-close" aria-label="Close image">Close ×</button>
+</div>
+<div class="viewer-image"><img alt="" id="expanded-image">
+</div></dialog>
 </body>
 </html>
-
