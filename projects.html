@@ -1,254 +1,659 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Engineering Projects | Kulvir Jaydeep Chavda</title>
-
-    <!-- Favicon and App Icons -->
-    <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
-    <link rel="manifest" href="icons/site.webmanifest">
-    <link rel="shortcut icon" href="icons/favicon.ico">
-    <meta name="msapplication-TileColor" content="#000000">
-    <meta name="msapplication-config" content="icons/browserconfig.xml">
-    <meta name="theme-color" content="#000000">
-
-    <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;700&display=swap" rel="stylesheet">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><title>Projects &amp; Experience | Kulvir Chavda</title>
+<meta name="description" content="All of Kulvir Chavda’s engineering projects, research, internships, and teaching work, with detailed descriptions and media.">
+<meta name="theme-color" content="#f4f2eb">
+<link rel="canonical" href="https://kulvirchavda.com/projects.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Projects &amp; Experience | Kulvir Chavda">
+<meta property="og:description" content="All of Kulvir Chavda’s engineering projects, research, internships, and teaching work, with detailed descriptions and media.">
+<meta property="og:url" content="https://kulvirchavda.com/projects.html">
+<meta property="og:image" content="https://kulvirchavda.com/images/optimized/portrait.webp">
+<meta property="og:image:alt" content="Kulvir Chavda with his AIAA student conference award">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="icons/mark.svg" type="image/svg+xml">
+<link rel="alternate icon" href="icons/favicon.ico">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<link rel="manifest" href="icons/site.webmanifest">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/portfolio.css">
+<script src="js/script.js" defer>
+</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Person", "name": "Kulvir Jaydeep Chavda", "url": "https://kulvirchavda.com/", "jobTitle": "Robotics graduate student", "affiliation": {"@type": "CollegeOrUniversity", "name": "Carnegie Mellon University"}, "sameAs": ["https://github.com/kul46", "https://www.linkedin.com/in/kulvirchavda"]}
+</script>
 </head>
-<body>
-    <!-- Navigation Bar -->
-    <nav>
-        <div class="nav-container">
-            <!-- Logo linking to the hero section -->
-            <div class="nav-logo">
-                <a href="index.html">Kulvir Chavda</a>
-            </div>
+<body><a href="#main" class="skip-link">Skip to content</a>
+<header class="site-header">
+<nav class="nav wrap" aria-label="Main navigation"><a class="brand" href="index.html" aria-label="Kulvir Chavda home"><img src="icons/mark.svg" alt="" width="35" height="35">Kulvir Chavda<span style="color:var(--orange)">.</span></a><button class="menu-toggle" type="button" aria-expanded="false" aria-controls="navigation">Menu +</button>
+<div class="nav-links" id="navigation"><a href="projects.html" aria-current="page">Projects</a><a href="research.html">Research</a><a href="work.html">Experience</a><a href="education.html">About</a><a href="files/cv.pdf">CV ↗</a><a class="nav-contact" href="#contact">Contact <span aria-hidden="true">↗</span></a>
+</div>
+</nav>
+</header>
+<main id="main">
+<div class="wrap">
+<header class="page-intro">
+<p class="eyebrow">Projects / Research / Experience
+</p>
+<h1>Things I’ve worked on.
+</h1>
+<p>Robots, aircraft, rockets, and a few projects that started with a question at home. Each entry covers what I worked on and my part in it.
+</p>
+</header>
+<section class="project-list" aria-label="Project collection">
+<div class="filters" role="group" aria-label="Filter projects" hidden><button type="button" class="filter" data-filter="all" aria-pressed="true">Everything</button><button type="button" class="filter" data-filter="research" aria-pressed="false">Research</button><button type="button" class="filter" data-filter="robotics" aria-pressed="false">Robotics</button><button type="button" class="filter" data-filter="industry" aria-pressed="false">Industry</button><button type="button" class="filter" data-filter="hardware" aria-pressed="false">Design & hardware</button><button type="button" class="filter" data-filter="leadership" aria-pressed="false">Leadership & teaching</button><button type="button" class="filter" data-filter="writing" aria-pressed="false">Writing</button>
+</div>
+<div class="project-grid">
+<article class="project-card" data-category="research robotics"><a class="card-image" href="nomora.html" aria-label="Read about Project NOMORA">
+<svg class="mission-svg" viewBox="0 0 660 470" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Concept diagram of a surface vessel supporting a robot that explores coastal terrain by ground and air. Not a simulation result.">
+<defs>
 
-             <!-- Hamburger icon (visible on narrow window) -->
-            <div class="hamburger" id="hamburger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
+<pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+<path d="M32 0H0V32" fill="none" stroke="#b6ccc3" stroke-opacity=".1" stroke-width=".6"/>
+</pattern>
 
-            <!-- Navigation menu for desktop -->
-            <ul class="nav-menu" id="nav-menu">
-                <li><a href="index.html#about">About Me</a></li>
-                <li><a href="education.html">Education, Skills & Courses</a></li>
-                <li><a href="work.html">Work Experience</a></li>
-                <li><a href="projects.html">Engineering Projects</a></li>
-                <li><a href="research.html">Research</a></li>
-                <li><a href="#contact">Get in Touch!</a></li>
-            </ul>
-        </div>
-    </nav>
+<pattern id="sea" width="20" height="20" patternUnits="userSpaceOnUse">
+<path d="M0 10h6m7 0h2" stroke="#91b3b0" stroke-opacity=".23" stroke-width="1"/>
+</pattern>
 
-    <!-- Projects Page Section -->
-    <section class="section projects-page-section" style="padding-top: 100px;">
-        <div class="container">
-
-            <div class="floating-image">
-                <div class="slideshow">
-                    <div class="slide active">
-                        <img src="images/MAero/MAeroBoard1.jpg" alt="Aerospace Engineering Intern">
-                    </div>
-                    <div class="slide">
-                        <img src="images/MAero/MAero2.jpg" alt="Aerospace Engineering Intern">
-                    </div>
-                    <div class="slide active">
-                        <img src="images/MAero/MAero3.JPG" alt="Aerospace Engineering Intern">
-                    </div>
-                    <div class="slide">
-                        <img src="images/MAero/MAero4.jpg" alt="Aerospace Engineering Intern">
-                    </div>
-                </div>
-                <!-- Navigation Box -->
-                <div class="slideshow-nav">
-                    <a class="prev" aria-label="Previous Slide">&#10094;</a>
-                    <div class="dots">
-                        <span class="dot active-dot"></span>
-                        <span class="dot"></span>
-                        <span class="dot"></span>
-                        <span class="dot"></span>
-                    </div>
-                    <a class="next" aria-label="Next Slide">&#10095;</a>
-                </div>
-            </div> 
-            
-            <div class="content">
-                <div class="research">
-                    <h3 style="color: black;">Head of Technical Projects – Systems Integration & Technical Program Management</h3>
-                    <p><strong>Jan 2023 - Present</strong></p>
-                    <h4>MAero UIUC (Minorities in Aerospace at the University of Illinois at Urbana-Champaign)</h4>
-                    <h4>Attempting to build the next generation of Student-led Engineering Projects.</h4>
-                    <ul>
-                        <li>Plan, advise, and recruit engineering students for any technical initiatives undertaken by MAero.</li>
-                        <li>Lead 3 tech project teams: High-altitude sounding rocket, Sustainable airplane, and a Fully 3D-printed autonomous drone.</li>
-                        <li>Coordinate and oversee system requirements, budgeting, prototyping, and timeline planning across multidisciplinary teams.</li>
-                        <li>Present engineering progress and future goals to potential sponsors and advisors to gain monetary & advisory support.</li>
-                        <li>Secured $2,500+ in funding from Blue Origin and organized aerospace research events featuring 5+ UIUC faculty.</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="section projects-page-section">
-        <div class="container">
-
-            <div class="floating-image">
-                <div class="slideshow">
-                    <div class="slide active">
-                        <img src="images/VLR/VLR.png" alt="Aerospace Engineering Intern">
-                    </div>
-                    <div class="slide">
-                        <img src="images/VLR/VLR2.jpg" alt="Aerospace Engineering Intern">
-                    </div>
-                    <div class="slide active">
-                        <img src="images/VLR/VLR3.jpg" alt="Aerospace Engineering Intern">
-                    </div>
-                    <div class="slide">
-                        <img src="images/VLR/VLR4.jpg" alt="Aerospace Engineering Intern">
-                    </div>
-                    <div class="slide active">
-                        <img src="images/VLR/VLR5.jpg" alt="Aerospace Engineering Intern">
-                    </div>
-                    <div class="slide">
-                        <img src="images/VLR/VLR6.jpg" alt="Aerospace Engineering Intern">
-                    </div>
-                </div>
-                <!-- Navigation Box -->
-                <div class="slideshow-nav">
-                    <a class="prev" aria-label="Previous Slide">&#10094;</a>
-                    <div class="dots">
-                        <span class="dot active-dot"></span>
-                        <span class="dot"></span>
-                        <span class="dot"></span>
-                        <span class="dot"></span>
-                        <span class="dot"></span>
-                        <span class="dot"></span>
-                    </div>
-                    <a class="next" aria-label="Next Slide">&#10095;</a>
-                </div>
-            </div> 
-
-            <div class="content">
-                <div class="research">
-                    <h3 style="color: black;">Project Systems Engineer – System Optimization & Prototyping</h3>
-                    <p><strong>Aug 2023 - Nov 2023</strong></p>
-                    <h4>Department of Defense S.T.E.M. Vertically Landed Rocket Challenge</h4>
-                    <ul>
-                        <li>Volunteered and assembled a team of engineers, over a month, to represent UIUC at the DoD VLR Challenge.</li>
-                        <li>Built & optimized a dual-servo system enabling a solid-fueled lander to reorient and land on descent from a height of 30m.</li>
-                        <li>Programmed and tuned onboard avionics to control burn timing and collect inertial and altimetric data across 5 test flights.</li>
-                        <li>Utilized simulation and test data to refine system parameters and improve stability margins by 40% across test iterations.</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="section projects-page-section">
-        <div class="container">
-
-            <div class="floating-image">
-                <div class="slideshow">
-                    <div class="slide active">
-                        <img src="images/IPASC/IPASC.png" alt="Aerospace Engineering Intern">
-                    </div>
-                    <div class="slide">
-                        <img src="images/IPASC/IPASC2.png" alt="Aerospace Engineering Intern">
-                    </div>
-                    <div class="slide active">
-                        <img src="images/IPASC/IPASC3.png" alt="Aerospace Engineering Intern">
-                    </div>
-                    <div class="slide">
-                        <img src="images/IPASC/IPASC4.png" alt="Aerospace Engineering Intern">
-                    </div>
-                    <div class="slide active">
-                        <img src="images/IPASC/IPASC5.png" alt="Aerospace Engineering Intern">
-                    </div>
-                    <div class="slide">
-                        <img src="images/IPASC/IPASC6.png" alt="Aerospace Engineering Intern">
-                    </div>
-                </div>
-                <!-- Navigation Box -->
-                <div class="slideshow-nav">
-                    <a class="prev" aria-label="Previous Slide">&#10094;</a>
-                    <div class="dots">
-                        <span class="dot active-dot"></span>
-                        <span class="dot"></span>
-                        <span class="dot"></span>
-                        <span class="dot"></span>
-                        <span class="dot"></span>
-                        <span class="dot"></span>
-                    </div>
-                    <a class="next" aria-label="Next Slide">&#10095;</a>
-                </div>
-            </div> 
-
-            <div class="content">
-                <div class="research">
-                    <h3 style="color: black;">Avionics Team Lead & Avionics Engineer</h3>
-                    <p><strong>Mar 2021 - Jun 2021</strong></p>
-                    <h4>International Planetary Aerial Systems Challenge, Mars Society South Asia</h4>
-                    <ul>
-                        <li>Designed a theoretical prototype for an unmanned aerial vehicle capable of carrying out man-assisted missions on Mars.</li>
-                        <li>Led the Avionics/GNC sub-team of 14 graduate/undergraduate students to develop all electronics required for the system.</li>
-                        <li>Facilitated full team meetings (50+ graduate & undergraduate students), as the youngest sub-system lead, to make sure all sub-systems maintain a good line of communication and minimize technical misunderstandings.</li>
-                        <li>Simulated functioning of mission avionics using industry-tested software and reduced avionics weight by 20%.</li>
-                        <li>Developed a terrain-hugging navigation system using Martian data from NASA within 2 weeks to minimize risk of crashes.</li>
-                        <li>Wrote, edited, and verified the avionics and GNC section of our engineering design report over 3 months with my team.</li>
-                        <li>Ranked 4th out of 26 teams internationally in the “International Planetary Aerial Systems Challenge” organized by MSSA.</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="section projects-page-section" style="background-color: black;">
-        <div class="container">
-            <div class="content">
-                <div class="research">
-                    <h3 style="color: white;">More Projects:</h3>
-                </div>
-                <div class="present-image">
-                    <img src="images/L1.png" alt="Projects" loading="lazy">
-                </div>
-                <div class="present-image">
-                    <img src="images/iFlyBrief.png" alt="Projects" loading="lazy">
-                </div>
-                <div class="present-image">
-                    <img src="images/CAD.png" alt="Projects" loading="lazy">
-                </div>
-                <div class="present-image">
-                    <img src="images/Solar.png" alt="Projects" loading="lazy">
-                </div>
-            </div>
-        </div>
-    </section>
-
-     <!-- Footer -->
-     <footer style="border-top: white 1px solid;">
-        <div class="footer-container">
-            <!-- Footer contact info -->
-            <h3 style="padding-bottom: 10px;">Get in Touch!</h3>
-            <p>Email: <a href="mailto:chavdakulvir@gmail.com">chavdakulvir@gmail.com</a></p>
-            <p>Phone: +1 (447) 902-1541</p>
-            <p>LinkedIn: <a href="https://www.linkedin.com/in/kulvirchavda">www.linkedin.com/in/kulvirchavda</a></p>
-            <p style="padding-bottom: 10px;">Location: Champaign, Illinois, USA</p>
-            
-            <!-- Button linking to the resume (PDF) -->
-            <button onclick="window.location.href='files/cv.pdf'" class="resume-button">
-                <img src="images/resume-icon.png" alt="Resume Icon"> View CV
-            </button>
-        </div>
-    </footer>
-
-    <script src="js/script.js"></script>
+<linearGradient id="land" x1="0" x2="1" y2="1"><stop stop-color="#c2c9a6"/><stop offset="1" stop-color="#6f8970"/>
+</linearGradient>
+</defs>
+<rect width="660" height="470" fill="#203d3b"/>
+<rect width="660" height="470" fill="url(#grid)"/>
+<path d="M0 0H660V470H0Z" fill="url(#sea)"/>
+<path d="M262-20C225 48 285 58 264 111S192 160 232 214 196 286 256 324 258 414 225 490H680V-20Z" fill="url(#land)"/>
+<g fill="none" stroke="#e7e8ca" stroke-width="1" opacity=".46">
+<path d="M276-20C239 48 301 57 279 114S212 161 248 214 215 283 273 323 277 414 244 490"/>
+<path d="M294-20C262 48 322 60 297 119S231 166 268 218 237 288 294 324 298 416 265 490"/>
+<path d="M319-20C286 49 347 66 324 121S255 177 294 222 267 290 320 329 324 414 295 490"/>
+<path d="M351-20C319 44 383 63 356 126S295 180 327 227 306 293 352 331 365 414 336 490"/>
+<path d="M392-20C360 44 427 63 402 131S349 178 371 230 351 296 398 334 407 415 389 490"/>
+<path d="M442-20C424 38 473 76 456 131S407 185 424 240 417 295 452 334 465 421 449 490"/>
+<path d="M492-20C485 48 532 75 516 138S474 190 486 241 481 300 506 340 527 429 514 490"/>
+<path d="M551-20C543 45 593 89 580 149S541 198 548 250 546 306 567 350 583 430 578 490"/>
+<path d="M612-20C603 45 652 94 646 149S603 198 612 250 608 306 631 350 645 430 641 490"/>
+</g>
+<path d="M271-20C234 48 294 58 273 111S201 160 241 214 205 286 265 324 267 414 234 490" fill="none" stroke="#e9dfb8" stroke-width="4" opacity=".85"/>
+<g stroke="#dce4cb" fill="none" opacity=".7">
+<path d="M535 326v-26m-13 13h26"/>
+<circle cx="535" cy="313" r="25"/>
+<circle cx="535" cy="313" r="44" stroke-dasharray="2 6"/>
+</g>
+<path class="route surface" d="M96 348Q124 318 185 298T253 278" fill="none" stroke="#a5d6d6" stroke-width="2" stroke-dasharray="5 6"/>
+<path class="route ground" d="M253 278L291 256 318 263 346 231 370 221" fill="none" stroke="#f8f3d9" stroke-width="3"/>
+<path class="route air" d="M370 221Q421 67 526 155T535 313" fill="none" stroke="#e6a06c" stroke-width="2.5" stroke-dasharray="7 5"/>
+<g fill="#f7efce">
+<circle cx="253" cy="278" r="5"/>
+<circle cx="318" cy="263" r="3"/>
+<circle cx="370" cy="221" r="5"/>
+<circle cx="535" cy="313" r="5"/>
+</g>
+<g transform="translate(115 328) rotate(30)">
+<path d="M-13-20H13L17 12 0 25-17 12Z" fill="#eceddd" stroke="#203d3b" stroke-width="2"/>
+<rect x="-8" y="-10" width="16" height="20" rx="2" fill="#50716a"/>
+<path d="M0-25v-12" stroke="#eceddd" stroke-width="2"/>
+</g>
+<g transform="translate(451 137) rotate(-15)" stroke="#f5ead0" stroke-width="2" fill="#203d3b">
+<path d="M-16-12 16 12m-32 0 32-24"/>
+<circle cx="-17" cy="-13" r="10"/>
+<circle cx="17" cy="13" r="10"/>
+<circle cx="-17" cy="13" r="10"/>
+<circle cx="17" cy="-13" r="10"/>
+<rect x="-6" y="-9" width="12" height="18" rx="3" fill="#d97e4d"/>
+</g>
+<g font-family="monospace" font-size="10" letter-spacing="1"><text x="48" y="397" fill="#bfdbd5">01 / SURFACE CARRIER</text><text x="278" y="305" fill="#1e3832">02 / GROUND</text><text x="473" y="112" fill="#f2edd7">03 / AIR</text><text x="465" y="381" fill="#1e3832">UNKNOWN TERRAIN</text>
+</g>
+<g transform="translate(49 47)" stroke="#c7d9cc" fill="none">
+<path d="M0 32V0L-4 8m4-8 4 8M-8 25H8"/><text x="-3" y="-9" fill="#c7d9cc" stroke="none" font-family="monospace" font-size="9">N</text>
+</g>
+<text x="463" y="440" font-family="monospace" font-size="9" fill="#243f34" letter-spacing="1">CONCEPT / NOT TO SCALE</text>
+</svg><span class="arrow" aria-hidden="true">↗</span></a>
+<p class="eyebrow">Carnegie Mellon · 2026-present
+</p>
+<h3><a href="nomora.html">Project NOMORA</a>
+</h3>
+<p>My current research with Prof. Matt Travers on hybrid robots for coastal exploration.
+</p>
+<div class="tags"><span class="tag">Field robotics</span><span class="tag">In progress</span>
+</div>
+</article>
+<article class="project-card" data-category="industry"><a class="card-image" href="work.html#stratos" aria-label="Read about Stratos Aircraft"><img src="images/optimized/aircraft.webp" alt="Engineering internship · 2025" loading="lazy" width="900" height="600"><span class="arrow" aria-hidden="true">↗</span></a>
+<p class="eyebrow">Engineering internship · 2025
+</p>
+<h3><a href="work.html#stratos">Stratos Aircraft</a>
+</h3>
+<p>Mechanical design and drafting for flight controls, landing gear, and structural systems.
+</p>
+<div class="tags"><span class="tag">Aircraft systems</span><span class="tag">Manufacturing</span>
+</div>
+</article>
+<article class="project-card" data-category="industry"><a class="card-image" href="work.html#adani" aria-label="Read about Adani Defence &amp; Aerospace"><img src="images/optimized/adani.webp" alt="R&amp;D internship · 2024" loading="lazy" width="900" height="600"><span class="arrow" aria-hidden="true">↗</span></a>
+<p class="eyebrow">R&D internship · 2024
+</p>
+<h3><a href="work.html#adani">Adani Defence & Aerospace</a>
+</h3>
+<p>Requirements, concept design, modeling, and engineering trade studies for a counter-drone system.
+</p>
+<div class="tags"><span class="tag">Systems engineering</span><span class="tag">R&amp;D</span>
+</div>
+</article>
+<article class="project-card" data-category="research robotics"><a class="card-image" href="research.html#nacxis" aria-label="Read about N-ACXIS Lab"><img src="images/optimized/autonomy.webp" alt="UIUC · 2024-2026" loading="lazy" width="900" height="600"><span class="arrow" aria-hidden="true">↗</span></a>
+<p class="eyebrow">UIUC · 2024-2026
+</p>
+<h3><a href="research.html#nacxis">N-ACXIS Lab</a>
+</h3>
+<p>Autonomy and control experiments with UAVs and ground robots in GPS-denied environments.
+</p>
+<div class="tags"><span class="tag">ROS 2</span><span class="tag">SLAM</span><span class="tag">Controls</span>
+</div>
+</article>
+<article class="project-card" data-category="research"><a class="card-image" href="research.html#rocket-paper" aria-label="Read about Rocket trajectory modeling"><img src="images/optimized/flight-test.webp" alt="AIAA conference paper · 2024" loading="lazy" width="900" height="600"><span class="arrow" aria-hidden="true">↗</span></a>
+<p class="eyebrow">AIAA conference paper · 2024
+</p>
+<h3><a href="research.html#rocket-paper">Rocket trajectory modeling</a>
+</h3>
+<p>A Python model evaluated against 24 flight tests and more than 25 motor thrust tests.
+</p>
+<div class="tags"><span class="tag">Numerical methods</span><span class="tag">Flight testing</span>
+</div>
+</article>
+<article class="project-card" data-category="leadership robotics"><a class="card-image" href="projects.html#maero" aria-label="Read about MAero technical projects"><img src="images/optimized/maero.webp" alt="UIUC · 2023-2026" loading="lazy" width="900" height="600"><span class="arrow" aria-hidden="true">↗</span></a>
+<p class="eyebrow">UIUC · 2023-2026
+</p>
+<h3><a href="projects.html#maero">MAero technical projects</a>
+</h3>
+<p>Leading student teams building a sounding rocket, a sustainable airplane, and a modular autonomous drone.
+</p>
+<div class="tags"><span class="tag">Team leadership</span><span class="tag">Prototyping</span>
+</div>
+</article>
+<article class="project-card" data-category="robotics"><a class="card-image" href="projects.html#rocket-lander" aria-label="Read about Vertically landed rocket"><img src="images/optimized/rocket-flight.webp" alt="DoD STEM challenge · 2023" loading="lazy" width="900" height="600"><span class="arrow" aria-hidden="true">↗</span></a>
+<p class="eyebrow">DoD STEM challenge · 2023
+</p>
+<h3><a href="projects.html#rocket-lander">Vertically landed rocket</a>
+</h3>
+<p>A six-person team, a dual-servo lander, and five flight tests to refine its behavior.
+</p>
+<div class="tags"><span class="tag">Avionics</span><span class="tag">Flight testing</span>
+</div>
+</article>
+<article class="project-card" data-category="robotics"><a class="card-image" href="projects.html#ipasc" aria-label="Read about Planetary aerial systems"><img src="images/optimized/ipasc.webp" alt="IPAS Challenge · 2021" loading="lazy" width="900" height="600"><span class="arrow" aria-hidden="true">↗</span></a>
+<p class="eyebrow">IPAS Challenge · 2021
+</p>
+<h3><a href="projects.html#ipasc">Planetary aerial systems</a>
+</h3>
+<p>Avionics and guidance design for a conceptual Mars aerial vehicle. Fourth place among 26 teams.
+</p>
+<div class="tags"><span class="tag">Avionics</span><span class="tag">GNC</span>
+</div>
+</article>
+<article class="project-card" data-category="hardware"><a class="card-image" href="projects.html#l1-rocket" aria-label="Read about L1 model rocket"><img src="images/optimized/l1.webp" alt="Individual engineering project" loading="lazy" width="900" height="600"><span class="arrow" aria-hidden="true">↗</span></a>
+<p class="eyebrow">Individual engineering project
+</p>
+<h3><a href="projects.html#l1-rocket">L1 model rocket</a>
+</h3>
+<p>An OpenRocket design built with a 3D-printed nose cone and laser-cut balsa fins.
+</p>
+<div class="tags"><span class="tag">OpenRocket</span><span class="tag">Fabrication</span>
+</div>
+</article>
+<article class="project-card" data-category="robotics leadership"><a class="card-image" href="projects.html#indoor-flight" aria-label="Read about Indoor skydiving robot"><img src="images/optimized/ifly.webp" alt="Robotics &amp; student mentorship" loading="lazy" width="900" height="600"><span class="arrow" aria-hidden="true">↗</span></a>
+<p class="eyebrow">Robotics & student mentorship
+</p>
+<h3><a href="projects.html#indoor-flight">Indoor skydiving robot</a>
+</h3>
+<p>A flapping mechanism inside a foam sphere, tested in an indoor skydiving chamber.
+</p>
+<div class="tags"><span class="tag">Mechanism design</span><span class="tag">Mentorship</span>
+</div>
+</article>
+<article class="project-card" data-category="hardware"><a class="card-image" href="projects.html#falcon-cad" aria-label="Read about Falcon 9 CAD model"><img src="images/optimized/falcon.webp" alt="AE 140 · UIUC" loading="lazy" width="900" height="600"><span class="arrow" aria-hidden="true">↗</span></a>
+<p class="eyebrow">AE 140 · UIUC
+</p>
+<h3><a href="projects.html#falcon-cad">Falcon 9 CAD model</a>
+</h3>
+<p>A semester-long Siemens NX model with an assembly study and moving grid fins.
+</p>
+<div class="tags"><span class="tag">Siemens NX</span><span class="tag">CAD</span>
+</div>
+</article>
+<article class="project-card" data-category="hardware"><a class="card-image" href="projects.html#home-solar" aria-label="Read about Home solar design"><img src="images/optimized/solar.webp" alt="Independent design project" loading="lazy" width="900" height="600"><span class="arrow" aria-hidden="true">↗</span></a>
+<p class="eyebrow">Independent design project
+</p>
+<h3><a href="projects.html#home-solar">Home solar design</a>
+</h3>
+<p>A rooftop layout, structural model, and cost analysis for a solar installation at my home in India.
+</p>
+<div class="tags"><span class="tag">Fusion 360</span><span class="tag">Energy</span>
+</div>
+</article>
+<article class="project-card" data-category="research"><a class="card-image" href="research.html#lassi" aria-label="Read about LASSI propulsion research"><img src="images/optimized/lassi.webp" alt="UIUC · 2024" loading="lazy" width="900" height="600"><span class="arrow" aria-hidden="true">↗</span></a>
+<p class="eyebrow">UIUC · 2024
+</p>
+<h3><a href="research.html#lassi">LASSI propulsion research</a>
+</h3>
+<p>Early design and requirements work for a chemical-electrospray propellant dual-feed system.
+</p>
+<div class="tags"><span class="tag">Space systems</span><span class="tag">Requirements</span>
+</div>
+</article>
+<article class="project-card" data-category="leadership"><a class="card-image" href="work.html#outreach" aria-label="Read about Aerospace STEM outreach"><img src="images/optimized/outreach.webp" alt="UIUC · 2023-2024" loading="lazy" width="900" height="600"><span class="arrow" aria-hidden="true">↗</span></a>
+<p class="eyebrow">UIUC · 2023-2024
+</p>
+<h3><a href="work.html#outreach">Aerospace STEM outreach</a>
+</h3>
+<p>Rocketry workshops for teachers and students, from experimental design to flight-data analysis.
+</p>
+<div class="tags"><span class="tag">Teaching</span><span class="tag">Experiment design</span>
+</div>
+</article>
+<article class="project-card" data-category="industry hardware"><a class="card-image" href="work.html#star" aria-label="Read about S.T.A.R. avionics internship"><img src="images/optimized/star.webp" alt="Avionics engineering · 2021" loading="lazy" width="900" height="600"><span class="arrow" aria-hidden="true">↗</span></a>
+<p class="eyebrow">Avionics engineering · 2021
+</p>
+<h3><a href="work.html#star">S.T.A.R. avionics internship</a>
+</h3>
+<p>Avionics concepts and design reports for a rocket motor test pad and a high-powered rocket.
+</p>
+<div class="tags"><span class="tag">Avionics</span><span class="tag">Technical reports</span>
+</div>
+</article>
+<article class="project-card" data-category="writing"><a class="card-image" href="research.html#cosmological" aria-label="Read about Cosmological"><img src="images/optimized/cosmological.webp" alt="Science writing · Started 2019" loading="lazy" width="900" height="600"><span class="arrow" aria-hidden="true">↗</span></a>
+<p class="eyebrow">Science writing · Started 2019
+</p>
+<h3><a href="research.html#cosmological">Cosmological</a>
+</h3>
+<p>A physics and space website I started to make sense of the ideas I was learning.
+</p>
+<div class="tags"><span class="tag">Science communication</span><span class="tag">Web development</span>
+</div>
+</article>
+</div>
+<p class="filter-count" role="status" aria-live="polite">16 entries shown
+</p>
+</section>
+<nav class="section-index" aria-label="Project sections"><a href="#maero">MAero<span aria-hidden="true">↓</span></a><a href="#rocket-lander">Rocket lander<span aria-hidden="true">↓</span></a><a href="#ipasc">IPAS Challenge<span aria-hidden="true">↓</span></a><a href="#l1-rocket">L1 rocket<span aria-hidden="true">↓</span></a><a href="#indoor-flight">Indoor skydiving robot<span aria-hidden="true">↓</span></a><a href="#falcon-cad">Falcon 9 CAD<span aria-hidden="true">↓</span></a><a href="#home-solar">Home solar<span aria-hidden="true">↓</span></a>
+</nav>
+<article class="case" id="maero">
+<div class="case-head">
+<div class="case-meta">
+<p class="eyebrow">Head of Technical Projects
+</p>
+<p>Jan 2023 - May 2026
+</p>
+<p>Minorities in Aerospace · UIUC
+</p>
+</div>
+<div class="case-title">
+<h2>MAero technical projects
+</h2>
+<p class="lead">I led three student engineering teams: a high-altitude sounding rocket, a sustainable airplane, and a fully 3D-printed modular autonomous drone.
+</p>
+</div>
+</div>
+<div class="case-body">
+<figure><img class="case-image" src="images/optimized/maero.webp" alt="MAero student leadership team" loading="lazy" width="900" height="750">
+</figure>
+<div class="case-copy">
+<h3>My role
+</h3>
+<p>I recruited students, advised technical initiatives, and coordinated requirements, budgets, prototypes, and schedules across more than 20 students.
+</p>
+<ul>
+<li>Presented engineering progress and plans to sponsors and advisors.
+</li>
+<li>Secured more than $2,500 in funding from Blue Origin.
+</li>
+<li>Organized research events connecting students with UIUC faculty.
+</li>
+</ul>
+<div class="tags"><span class="tag">Leadership</span><span class="tag">Systems engineering</span><span class="tag">Prototyping</span>
+</div>
+</div>
+</div>
+<details class="gallery-disclosure">
+<summary>Photos &amp; figures <span>(3)</span>
+</summary>
+<div class="media-gallery">
+<figure><button type="button" class="gallery-image" data-image="images/MAero/MAero2.jpg" data-caption="Student rocket hardware" aria-label="Enlarge Student rocket hardware"><img src="images/MAero/MAero2.jpg" alt="Student rocket hardware" loading="lazy"><span aria-hidden="true">+</span></button>
+<figcaption>Student rocket hardware
+</figcaption>
+</figure>
+<figure><button type="button" class="gallery-image" data-image="images/MAero/MAero3.JPG" data-caption="MAero Atmos and Horizon project plans" aria-label="Enlarge MAero Atmos and Horizon project plans"><img src="images/MAero/MAero3.JPG" alt="MAero Atmos and Horizon project plans" loading="lazy"><span aria-hidden="true">+</span></button>
+<figcaption>MAero Atmos and Horizon project plans
+</figcaption>
+</figure>
+<figure><button type="button" class="gallery-image" data-image="images/MAero/MAero4.jpg" data-caption="Modular drone CAD work" aria-label="Enlarge Modular drone CAD work"><img src="images/MAero/MAero4.jpg" alt="Modular drone CAD work" loading="lazy"><span aria-hidden="true">+</span></button>
+<figcaption>Modular drone CAD work
+</figcaption>
+</figure>
+</div>
+</details>
+</article>
+<article class="case" id="rocket-lander">
+<div class="case-head">
+<div class="case-meta">
+<p class="eyebrow">Project Systems Engineer
+</p>
+<p>Aug - Nov 2023
+</p>
+<p>DoD STEM Vertically Landed Rocket Challenge
+</p>
+</div>
+<div class="case-title">
+<h2>Vertically landed rocket
+</h2>
+<p class="lead">I assembled a six-person team to represent UIUC in a challenge to build a rocket lander for descent from 30 meters.
+</p>
+</div>
+</div>
+<div class="case-body">
+<figure><img class="case-image" src="images/optimized/rocket-team.webp" alt="UIUC rocket lander team with its hardware" loading="lazy" width="900" height="750">
+</figure>
+<div class="case-copy">
+<h3>Design and testing
+</h3>
+<p>I built and optimized a dual-servo system, then programmed and tuned onboard avionics for burn timing and orientation. We collected inertial and altimetric data across five test flights.
+</p>
+<p>Simulation and test data informed the design iterations, improving stability margins by 40% across tests.
+</p>
+<div class="tags"><span class="tag">Avionics</span><span class="tag">Controls</span><span class="tag">Flight testing</span>
+</div>
+</div>
+</div>
+<details class="gallery-disclosure">
+<summary>Photos &amp; figures <span>(5)</span>
+</summary>
+<div class="media-gallery">
+<figure><button type="button" class="gallery-image" data-image="images/VLR/VLR.png" data-caption="Rocket lander project board" aria-label="Enlarge Rocket lander project board"><img src="images/VLR/VLR.png" alt="Rocket lander project board" loading="lazy"><span aria-hidden="true">+</span></button>
+<figcaption>Rocket lander project board
+</figcaption>
+</figure>
+<figure><button type="button" class="gallery-image" data-image="images/VLR/VLR2.jpg" data-caption="Rocket lander hardware" aria-label="Enlarge Rocket lander hardware"><img src="images/VLR/VLR2.jpg" alt="Rocket lander hardware" loading="lazy"><span aria-hidden="true">+</span></button>
+<figcaption>Rocket lander hardware
+</figcaption>
+</figure>
+<figure><button type="button" class="gallery-image" data-image="images/VLR/VLR4.jpg" data-caption="Airborne drop test" aria-label="Enlarge Airborne drop test"><img src="images/VLR/VLR4.jpg" alt="Airborne drop test" loading="lazy"><span aria-hidden="true">+</span></button>
+<figcaption>Airborne drop test
+</figcaption>
+</figure>
+<figure><button type="button" class="gallery-image" data-image="images/VLR/VLR5.jpg" data-caption="Rocket lander development" aria-label="Enlarge Rocket lander development"><img src="images/VLR/VLR5.jpg" alt="Rocket lander development" loading="lazy"><span aria-hidden="true">+</span></button>
+<figcaption>Rocket lander development
+</figcaption>
+</figure>
+<figure><button type="button" class="gallery-image" data-image="images/VLR/VLR6.jpg" data-caption="Rocket lander test setup" aria-label="Enlarge Rocket lander test setup"><img src="images/VLR/VLR6.jpg" alt="Rocket lander test setup" loading="lazy"><span aria-hidden="true">+</span></button>
+<figcaption>Rocket lander test setup
+</figcaption>
+</figure>
+</div>
+</details>
+</article>
+<article class="case" id="ipasc">
+<div class="case-head">
+<div class="case-meta">
+<p class="eyebrow">Avionics Team Lead & Avionics Engineer
+</p>
+<p>Mar - Jun 2021
+</p>
+<p>Mars Society South Asia
+</p>
+</div>
+<div class="case-title">
+<h2>International Planetary Aerial Systems Challenge
+</h2>
+<p class="lead">A conceptual aerial vehicle for missions on Mars, developed for the International Planetary Aerial Systems Challenge.
+</p>
+</div>
+</div>
+<div class="case-body">
+<figure><img class="case-image" src="images/optimized/ipasc.webp" alt="CAD rendering of the conceptual Mars aerial vehicle" loading="lazy" width="900" height="750">
+</figure>
+<div class="case-copy">
+<h3>Avionics and guidance
+</h3>
+<p>I led a 14-person Avionics/GNC sub-team and helped coordinate a team of more than 50 students. We developed electronics concepts, simulated mission avionics, and designed terrain-following navigation using NASA Martian terrain data.
+</p>
+<ul>
+<li>Reduced the avionics design’s weight by 20% through simulation and design iteration.
+</li>
+<li>Developed the terrain-following navigation concept over two weeks.
+</li>
+<li>Wrote and reviewed the avionics and GNC sections of the engineering design report.
+</li>
+</ul>
+<p>Our team, AEROS, ranked fourth among 26 teams internationally. This was a conceptual design competition.
+</p>
+<div class="tags"><span class="tag">Avionics</span><span class="tag">GNC</span><span class="tag">Concept design</span>
+</div>
+</div>
+</div>
+<details class="gallery-disclosure">
+<summary>Photos &amp; figures <span>(5)</span>
+</summary>
+<div class="media-gallery">
+<figure><button type="button" class="gallery-image" data-image="images/IPASC/IPASC.png" data-caption="IPAS Challenge project board" aria-label="Enlarge IPAS Challenge project board"><img src="images/IPASC/IPASC.png" alt="IPAS Challenge project board" loading="lazy"><span aria-hidden="true">+</span></button>
+<figcaption>IPAS Challenge project board
+</figcaption>
+</figure>
+<figure><button type="button" class="gallery-image" data-image="images/IPASC/IPASC3.png" data-caption="Aerial vehicle design" aria-label="Enlarge Aerial vehicle design"><img src="images/IPASC/IPASC3.png" alt="Aerial vehicle design" loading="lazy"><span aria-hidden="true">+</span></button>
+<figcaption>Aerial vehicle design
+</figcaption>
+</figure>
+<figure><button type="button" class="gallery-image" data-image="images/IPASC/IPASC4.png" data-caption="Competition rankings" aria-label="Enlarge Competition rankings"><img src="images/IPASC/IPASC4.png" alt="Competition rankings" loading="lazy"><span aria-hidden="true">+</span></button>
+<figcaption>Competition rankings
+</figcaption>
+</figure>
+<figure><button type="button" class="gallery-image" data-image="images/IPASC/IPASC5.png" data-caption="IPAS Challenge design documentation" aria-label="Enlarge IPAS Challenge design documentation"><img src="images/IPASC/IPASC5.png" alt="IPAS Challenge design documentation" loading="lazy"><span aria-hidden="true">+</span></button>
+<figcaption>IPAS Challenge design documentation
+</figcaption>
+</figure>
+<figure><button type="button" class="gallery-image" data-image="images/IPASC/IPASC6.png" data-caption="IPAS Challenge team documentation" aria-label="Enlarge IPAS Challenge team documentation"><img src="images/IPASC/IPASC6.png" alt="IPAS Challenge team documentation" loading="lazy"><span aria-hidden="true">+</span></button>
+<figcaption>IPAS Challenge team documentation
+</figcaption>
+</figure>
+</div>
+</details>
+</article>
+<article class="case" id="l1-rocket">
+<div class="case-head">
+<div class="case-meta">
+<p class="eyebrow">Individual project
+</p>
+<p>Aerospace engineering coursework
+</p>
+<p>University of Illinois
+</p>
+</div>
+<div class="case-title">
+<h2>L1 model rocket
+</h2>
+<p class="lead">An individual H/I-class rocket build completed over four months as part of an optional aerospace course.
+</p>
+</div>
+</div>
+<div class="case-body">
+<figure><img class="case-image" src="images/optimized/l1.webp" alt="Completed model rocket with its nose cone and fins" loading="lazy" width="900" height="750">
+</figure>
+<div class="case-copy">
+<h3>From OpenRocket to hardware
+</h3>
+<p>I modeled the rocket in OpenRocket and designed it for an altitude of 2,000 feet. The build used a 3D-printed nose cone and laser-cut balsa-wood fins.
+</p>
+<p>The course was structured around building a rocket toward L1 certification. My project covered the individual design, component fabrication, and final assembly.
+</p>
+<div class="tags"><span class="tag">OpenRocket</span><span class="tag">3D printing</span><span class="tag">Rocket construction</span>
+</div>
+</div>
+</div>
+<details class="gallery-disclosure">
+<summary>Photos &amp; figures <span>(1)</span>
+</summary>
+<div class="media-gallery">
+<figure><button type="button" class="gallery-image" data-image="images/L1.png" data-caption="L1 rocket design and construction board" aria-label="Enlarge L1 rocket design and construction board"><img src="images/L1.png" alt="L1 rocket design and construction board" loading="lazy"><span aria-hidden="true">+</span></button>
+<figcaption>L1 rocket design and construction board
+</figcaption>
+</figure>
+</div>
+</details>
+</article>
+<article class="case" id="indoor-flight">
+<div class="case-head">
+<div class="case-meta">
+<p class="eyebrow">Design & mentorship
+</p>
+<p>Student engineering project
+</p>
+<p>Wolcott College Prep · Chicago
+</p>
+</div>
+<div class="case-title">
+<h2>Flapping robot for indoor skydiving
+</h2>
+<p class="lead">A robot designed to oscillate vertically inside an indoor skydiving chamber.
+</p>
+</div>
+</div>
+<div class="case-body">
+<figure><img class="case-image" src="images/optimized/ifly.webp" alt="Flapping mechanism assembled from 3D-printed and modular parts" loading="lazy" width="900" height="750">
+</figure>
+<div class="case-copy">
+<h3>The mechanism
+</h3>
+<p>I designed a flapping mechanism using 3D-printed and LEGO-type parts, housed inside a spherical foam ball.
+</p>
+<h3>Building with students
+</h3>
+<p>I mentored students from Wolcott College Prep through the project. During chamber testing, the robot successfully oscillated freely in the airflow.
+</p>
+<div class="tags"><span class="tag">Mechanism design</span><span class="tag">Prototyping</span><span class="tag">Mentorship</span>
+</div>
+</div>
+</div>
+<details class="gallery-disclosure">
+<summary>Photos &amp; figures <span>(1)</span>
+</summary>
+<div class="media-gallery">
+<figure><button type="button" class="gallery-image" data-image="images/iFlyBrief.png" data-caption="Robot mechanism and indoor skydiving test" aria-label="Enlarge Robot mechanism and indoor skydiving test"><img src="images/iFlyBrief.png" alt="Robot mechanism and indoor skydiving test" loading="lazy"><span aria-hidden="true">+</span></button>
+<figcaption>Robot mechanism and indoor skydiving test
+</figcaption>
+</figure>
+</div>
+</details>
+</article>
+<article class="case" id="falcon-cad">
+<div class="case-head">
+<div class="case-meta">
+<p class="eyebrow">Aerospace CAD final project
+</p>
+<p>AE 140
+</p>
+<p>University of Illinois
+</p>
+</div>
+<div class="case-title">
+<h2>Falcon 9 CAD model
+</h2>
+<p class="lead">A semester-long Siemens NX project to study the design and assembly of an aerospace vehicle.
+</p>
+</div>
+</div>
+<div class="case-body">
+<figure><img class="case-image" src="images/optimized/falcon.webp" alt="Exploded CAD view of a Falcon 9 model" loading="lazy" width="900" height="750">
+</figure>
+<div class="case-copy">
+<h3>Modeling the assembly
+</h3>
+<p>I researched Falcon 9’s layout and dimensions, made the necessary design estimates, and built a model showing its stages, engines, fairings, landing legs, and grid fins.
+</p>
+<p>The assignment required a moving mechanical component. I chose to model functional grid fins and presented the completed assembly at the end of the semester.
+</p>
+<div class="tags"><span class="tag">Siemens NX</span><span class="tag">Assembly modeling</span><span class="tag">Mechanical motion</span>
+</div>
+</div>
+</div>
+<details class="gallery-disclosure">
+<summary>Photos &amp; figures <span>(1)</span>
+</summary>
+<div class="media-gallery">
+<figure><button type="button" class="gallery-image" data-image="images/CAD.png" data-caption="Falcon 9 assembly and grid-fin CAD project" aria-label="Enlarge Falcon 9 assembly and grid-fin CAD project"><img src="images/CAD.png" alt="Falcon 9 assembly and grid-fin CAD project" loading="lazy"><span aria-hidden="true">+</span></button>
+<figcaption>Falcon 9 assembly and grid-fin CAD project
+</figcaption>
+</figure>
+</div>
+</details>
+</article>
+<article class="case" id="home-solar">
+<div class="case-head">
+<div class="case-meta">
+<p class="eyebrow">Independent design project
+</p>
+<p>Residential energy
+</p>
+<p>India
+</p>
+</div>
+<div class="case-title">
+<h2>Home solar power design
+</h2>
+<p class="lead">A solar installation concept based on measured dimensions of my home in India.
+</p>
+</div>
+</div>
+<div class="case-body">
+<figure><img class="case-image" src="images/optimized/solar.webp" alt="Fusion 360 model of the proposed rooftop solar structure" loading="lazy" width="900" height="750">
+</figure>
+<div class="case-copy">
+<h3>A design for a specific roof
+</h3>
+<p>I measured the roof, modeled the structure to scale in Fusion 360, and planned a solar layout around the available space.
+</p>
+<p>I also performed a cost analysis and sized the proposed system to cover at least 70% of the household’s electricity needs. This was a design and analysis project.
+</p>
+<div class="tags"><span class="tag">Fusion 360</span><span class="tag">Site measurements</span><span class="tag">Cost analysis</span>
+</div>
+</div>
+</div>
+<details class="gallery-disclosure">
+<summary>Photos &amp; figures <span>(1)</span>
+</summary>
+<div class="media-gallery">
+<figure><button type="button" class="gallery-image" data-image="images/Solar.png" data-caption="Roof measurements and solar installation design" aria-label="Enlarge Roof measurements and solar installation design"><img src="images/Solar.png" alt="Roof measurements and solar installation design" loading="lazy"><span aria-hidden="true">+</span></button>
+<figcaption>Roof measurements and solar installation design
+</figcaption>
+</figure>
+</div>
+</details>
+</article>
+</div>
+</main>
+<footer class="contact" id="contact">
+<div class="wrap">
+<div class="contact-top">
+<div>
+<p class="eyebrow"><span class="dot"></span>Contact
+</p>
+<h2>Get in touch.
+</h2>
+</div>
+<div>
+<p>For research collaborations, engineering opportunities, or a project you’d like to discuss.
+</p>
+<div class="actions"><a class="button" href="mailto:chavdakulvir@gmail.com">Email me <span aria-hidden="true">↗</span></a><button class="copy-email" type="button" hidden>Copy email</button>
+</div><span class="contact-status" role="status" aria-live="polite"></span>
+</div>
+</div>
+<div class="footer-bottom"><span>© 2026 Kulvir Jaydeep Chavda · Pittsburgh, PA</span>
+<div class="footer-links"><a href="https://www.linkedin.com/in/kulvirchavda">LinkedIn ↗</a><a href="https://github.com/kul46">GitHub ↗</a><a href="files/cv.pdf">CV · Aug 2026 ↗</a><a href="#main">Back to top ↑</a>
+</div>
+</div>
+</div>
+</footer><dialog id="image-viewer" aria-labelledby="image-caption">
+<div class="viewer-toolbar">
+<p id="image-caption">
+</p><button type="button" class="viewer-close" aria-label="Close image">Close ×</button>
+</div>
+<div class="viewer-image"><img alt="" id="expanded-image">
+</div></dialog>
 </body>
 </html>
-
