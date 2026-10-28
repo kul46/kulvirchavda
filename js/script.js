@@ -167,9 +167,9 @@ if (stage) {
   const pin = stage.querySelector('.stage-pin');
   const hull = stage.querySelector('.craft-hull');
   const shapes = [
-    [[-42,-52],[0,-70],[42,-52],[55,-10],[55,35],[30,58],[-30,58],[-55,35],[-55,-10],[-42,-52]],
-    [[-14,-120],[0,-155],[14,-120],[24,35],[18,95],[0,120],[-18,95],[-24,35],[-20,-25],[-14,-120]],
-    [[-90,-40],[0,-55],[90,-40],[105,0],[85,48],[30,60],[-30,60],[-85,48],[-105,0],[-90,-40]]
+    [[-38,-58],[0,-72],[38,-58],[52,-12],[48,34],[28,55],[0,62],[-28,55],[-48,34],[-52,-12],[-38,-58]],
+    [[-12,-112],[0,-148],[12,-112],[22,42],[14,96],[6,114],[0,120],[-6,114],[-14,96],[-22,42],[-12,-112]],
+    [[-60,-85],[0,-95],[60,-85],[72,-25],[72,45],[45,78],[0,88],[-45,78],[-72,45],[-72,-25],[-60,-85]]
   ];
   const names = ['Field robotics.', 'Aircraft & flight.', 'Space robotics.'];
   const notes = ['How do we move through what we don’t yet know?', 'The same curiosity, with a different view.', 'An interest in exploration beyond Earth.'];
@@ -182,9 +182,12 @@ if (stage) {
     const t = amount * amount * (3 - 2 * amount);
     const points = shapes[segment].map((point,i) => point.map((value,j) => (value + (shapes[segment+1][i][j] - value) * t).toFixed(1)));
     hull.setAttribute('d', points.map((p,i) => `${i ? 'L' : 'M'}${p[0]} ${p[1]}`).join('')+'Z');
-    stage.querySelector('.craft-drone').setAttribute('opacity', String(segment === 0 ? 1 - t : 0));
-    stage.querySelector('.craft-flight').setAttribute('opacity', String(segment === 0 ? t : 1-t));
-    stage.querySelector('.craft-rover').setAttribute('opacity', String(segment === 1 ? t : 0));
+    // Retract attachments before extending the next set, avoiding overlapping outlines.
+    const retract = Math.max(0,1 - t * 3);
+    const extend = Math.max(0,(t - .65) / .35);
+    stage.querySelector('.craft-drone').setAttribute('opacity', String(segment === 0 ? retract : 0));
+    stage.querySelector('.craft-flight').setAttribute('opacity', String(segment === 0 ? extend : retract));
+    stage.querySelector('.craft-rover').setAttribute('opacity', String(segment === 1 ? extend : 0));
     stage.querySelector('.stage-space').setAttribute('opacity', String(segment === 1 ? t : 0));
     stage.querySelector('.stage-ground').setAttribute('opacity', String(1-progress*.75));
     const index = progress < .26 ? 0 : progress < .76 ? 1 : 2;
@@ -214,4 +217,42 @@ if (stage) {
   shortStage.addEventListener('change',queueStage);
   new ResizeObserver(queueStage).observe(stage);
   queueStage();
+}
+
+// A mouse-only instrument ring. The native cursor stays available and precise.
+const pointerRing = document.querySelector('.cursor-instrument');
+const precisionPointer = matchMedia('(hover: hover) and (pointer: fine)');
+if (pointerRing) {
+  let pointerFrame = 0;
+  let pointerX = 0;
+  let pointerY = 0;
+  let pointerTarget;
+  function drawPointer() {
+    pointerFrame = 0;
+    if (!precisionPointer.matches || reducedMotion.matches) { pointerRing.style.opacity = '0'; return; }
+    pointerRing.style.transform = `translate3d(${pointerX}px,${pointerY}px,0)`;
+    pointerRing.style.opacity = '1';
+    const interactive = pointerTarget?.closest('a,button,summary');
+    pointerRing.dataset.intent = interactive?.matches('[data-image]') ? 'image' : interactive ? 'link' : '';
+    const row = pointerTarget?.closest('.project-entry>summary');
+    if (row) {
+      const bounds = row.getBoundingClientRect();
+      row.style.setProperty('--project-x',`${pointerX-bounds.left}px`);
+      row.style.setProperty('--project-y',`${pointerY-bounds.top}px`);
+    }
+  }
+  document.addEventListener('pointermove', event => {
+    if (event.pointerType !== 'mouse' || !precisionPointer.matches || reducedMotion.matches) return;
+    pointerX = event.clientX;
+    pointerY = event.clientY;
+    pointerTarget = event.target instanceof Element ? event.target : null;
+    if (!pointerFrame) pointerFrame = requestAnimationFrame(drawPointer);
+  }, {passive: true});
+  const hidePointer = () => { pointerRing.style.opacity = '0'; };
+  document.addEventListener('pointerdown',event => { if (event.pointerType !== 'mouse') hidePointer(); },{passive:true});
+  document.addEventListener('pointerleave',hidePointer);
+  document.addEventListener('keydown',hidePointer);
+  document.addEventListener('visibilitychange',hidePointer);
+  precisionPointer.addEventListener('change',hidePointer);
+  reducedMotion.addEventListener('change',hidePointer);
 }

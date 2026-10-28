@@ -26,6 +26,7 @@ Then open http://127.0.0.1:4174. If Python is not on PATH, use the Python execut
 | `css/portfolio.css` | Project galleries, video layout, terrain accents, and phone refinements |
 | `css/night.css` | Dark palette, orbital and terrain layers, project register, and media strips |
 | `css/motion.css` | Vector icons, iOS control styling, full image boards, and the scroll-driven vehicle illustration |
+| `css/precision.css` | Black palette, project previews and hover illumination, mouse instrument ring, and refined schematic rendering |
 | `js/script.js` | Mobile navigation, project expansion, media strips/viewer, scroll motion, and email copying |
 | `files/cv.pdf` | Supplied August 2026 CV |
 | `images/optimized/` | Smaller WebP copies of existing portfolio photographs |
@@ -53,6 +54,7 @@ The fonts load from Google Fonts with local serif/sans-serif fallbacks. There ar
 ```powershell
 python scripts/check_site.py
 node --check js/script.js
+python scripts/check_illustration.py
 ```
 
 The Python check verifies local assets, path capitalization for Linux/GitHub Pages, fragments, duplicate IDs, image alt attributes, basic metadata, and the custom domain. Also review the site in a browser at phone and desktop sizes after layout changes.
@@ -62,6 +64,8 @@ The October 27 revision was checked at 320, 360, 390, 430, 768, and 1280 CSS pix
 The October 28 dark revision was checked across all six pages at 320, 390, 768, and 1280 CSS pixels. Phone interaction checks covered the expandable project register, media-strip controls, viewer next/previous, Escape, and menu navigation. The Parkland qualification now explicitly says Licensed Private Pilot, and the bio identifies flying planes.
 
 The later motion revision was checked on all six pages at 320, 390, 430, 768, 1024, 1280, and 1920 CSS pixels. Browser interactions verified the three distinct SVG hull shapes, phone stage selection, 844×390 landscape fallback, full project-board images, single-image zoom, and menu colors. Physical iPhone Safari was not available for testing; the platform-specific text arrows were replaced with SVG and native button appearance was explicitly reset.
+
+The precision pass uses mirrored top-down vehicle assemblies. The hull check samples 202 intermediate outlines for bilateral symmetry, closure, and intersecting edges. Responsive checks also verify that the aircraft fits inside the illustration area at all seven widths. A mouse-only instrument ring changes shape over links and image controls while preserving the native cursor. Touch input and reduced-motion preferences suppress the ring. Closed project entries include preview images and discipline labels; they keep native disclosure and keyboard behavior.
 
 ## Publishing on the existing GitHub Pages site
 
