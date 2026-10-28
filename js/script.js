@@ -20,7 +20,7 @@ document.addEventListener('keydown', event => {
 document.addEventListener('click', event => {
   if (!event.target.closest('.site-header')) closeMenu();
 });
-matchMedia('(min-width: 801px)').addEventListener('change', event => {
+matchMedia('(min-width: 1051px)').addEventListener('change', event => {
   if (event.matches) closeMenu();
 });
 
@@ -39,7 +39,8 @@ function displayImage() {
 document.querySelectorAll('[data-image]').forEach(button => {
   button.addEventListener('click', () => {
     imageTrigger = button;
-    imageGroup = [...button.closest('.media-reel').querySelectorAll('[data-image]')];
+    const reel = button.closest('.media-reel');
+    imageGroup = reel ? [...reel.querySelectorAll('[data-image]')] : [button];
     imageIndex = imageGroup.indexOf(button);
     displayImage();
     viewer.showModal();
@@ -158,3 +159,59 @@ document.querySelectorAll('.copy-email').forEach(button => {
     }
   });
 });
+
+// A shared silhouette changes shape across three engineering environments.
+const stage = document.querySelector('.exploration-stage');
+if (stage) {
+  stage.classList.add('js-stage');
+  const pin = stage.querySelector('.stage-pin');
+  const hull = stage.querySelector('.craft-hull');
+  const shapes = [
+    [[-42,-52],[0,-70],[42,-52],[55,-10],[55,35],[30,58],[-30,58],[-55,35],[-55,-10],[-42,-52]],
+    [[-14,-120],[0,-155],[14,-120],[24,35],[18,95],[0,120],[-18,95],[-24,35],[-20,-25],[-14,-120]],
+    [[-90,-40],[0,-55],[90,-40],[105,0],[85,48],[30,60],[-30,60],[-85,48],[-105,0],[-90,-40]]
+  ];
+  const names = ['Field robotics.', 'Aircraft & flight.', 'Space robotics.'];
+  const notes = ['How do we move through what we don’t yet know?', 'The same curiosity, with a different view.', 'An interest in exploration beyond Earth.'];
+  let selected = 0;
+  let frame = 0;
+  const shortStage = matchMedia('(max-height: 600px) and (min-width: 601px)');
+  function render(progress) {
+    const segment = progress < .5 ? 0 : 1;
+    const amount = Math.min(1,Math.max(0,(progress - segment * .5) * 2));
+    const t = amount * amount * (3 - 2 * amount);
+    const points = shapes[segment].map((point,i) => point.map((value,j) => (value + (shapes[segment+1][i][j] - value) * t).toFixed(1)));
+    hull.setAttribute('d', points.map((p,i) => `${i ? 'L' : 'M'}${p[0]} ${p[1]}`).join('')+'Z');
+    stage.querySelector('.craft-drone').setAttribute('opacity', String(segment === 0 ? 1 - t : 0));
+    stage.querySelector('.craft-flight').setAttribute('opacity', String(segment === 0 ? t : 1-t));
+    stage.querySelector('.craft-rover').setAttribute('opacity', String(segment === 1 ? t : 0));
+    stage.querySelector('.stage-space').setAttribute('opacity', String(segment === 1 ? t : 0));
+    stage.querySelector('.stage-ground').setAttribute('opacity', String(1-progress*.75));
+    const index = progress < .26 ? 0 : progress < .76 ? 1 : 2;
+    stage.querySelector('.stage-title').textContent = names[index];
+    stage.querySelector('.stage-note').textContent = notes[index];
+    stage.querySelector('.stage-index').textContent = `0${index+1} / 03`;
+    stage.querySelectorAll('[data-stage]').forEach((button,i) => button.setAttribute('aria-pressed', String(i === index)));
+  }
+  function updateStage() {
+    frame = 0;
+    if (reducedMotion.matches || shortStage.matches) { render(selected); return; }
+    const top = parseFloat(getComputedStyle(pin).top) || 0;
+    const distance = Math.max(1,stage.offsetHeight - pin.offsetHeight);
+    render(Math.min(1,Math.max(0,(top - stage.getBoundingClientRect().top) / distance)));
+  }
+  function queueStage() { if (!frame) frame = requestAnimationFrame(updateStage); }
+  stage.querySelectorAll('[data-stage]').forEach(button => button.addEventListener('click', () => {
+    selected = Number(button.dataset.stage);
+    if (reducedMotion.matches || shortStage.matches) { render(selected); return; }
+    const top = parseFloat(getComputedStyle(pin).top) || 0;
+    window.scrollTo({top: scrollY + stage.getBoundingClientRect().top - top + (stage.offsetHeight-pin.offsetHeight)*selected,behavior:'instant'});
+    queueStage();
+  }));
+  window.addEventListener('scroll',queueStage,{passive:true});
+  window.addEventListener('resize',queueStage,{passive:true});
+  reducedMotion.addEventListener('change',queueStage);
+  shortStage.addEventListener('change',queueStage);
+  new ResizeObserver(queueStage).observe(stage);
+  queueStage();
+}

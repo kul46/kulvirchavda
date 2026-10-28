@@ -82,6 +82,12 @@ for name, page in pages.items():
         errors.append(f'{name}: em dash remains')
     if 'Selected work' in source or 'original site' in source or 'original project overview' in source:
         errors.append(f'{name}: retired wording remains')
+    if 'github.com/kul46' in source:
+        errors.append(f'{name}: GitHub profile link remains')
+    if any(icon in source for icon in ['↗', '→', '←', '↑', '↓']):
+        errors.append(f'{name}: platform-dependent arrow glyph remains')
+    if 'Students across teams led' in source:
+        errors.append(f'{name}: retired leadership wording remains')
     for ref in page.refs:
         if ref.lower().endswith('.mov'):
             errors.append(f'{name}: MOV link remains instead of inline MP4')
