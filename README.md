@@ -26,7 +26,7 @@ Then open http://127.0.0.1:4174. If Python is not on PATH, use the Python execut
 | `css/portfolio.css` | Project galleries, video layout, terrain accents, and phone refinements |
 | `css/night.css` | Dark palette, orbital and terrain layers, project register, and media strips |
 | `css/motion.css` | Vector icons, iOS control styling, full image boards, and the scroll-driven vehicle illustration |
-| `css/precision.css` | Black palette, project previews and hover illumination, mouse instrument ring, and refined schematic rendering |
+| `css/precision.css` | Black palette, project hover illumination, subtle page lighting, full research images, and refined schematic rendering |
 | `js/script.js` | Mobile navigation, project expansion, media strips/viewer, scroll motion, and email copying |
 | `files/cv.pdf` | Supplied August 2026 CV |
 | `images/optimized/` | Smaller WebP copies of existing portfolio photographs |
@@ -65,7 +65,7 @@ The October 28 dark revision was checked across all six pages at 320, 390, 768, 
 
 The later motion revision was checked on all six pages at 320, 390, 430, 768, 1024, 1280, and 1920 CSS pixels. Browser interactions verified the three distinct SVG hull shapes, phone stage selection, 844×390 landscape fallback, full project-board images, single-image zoom, and menu colors. Physical iPhone Safari was not available for testing; the platform-specific text arrows were replaced with SVG and native button appearance was explicitly reset.
 
-The precision pass uses mirrored top-down vehicle assemblies. The hull check samples 202 intermediate outlines for bilateral symmetry, closure, and intersecting edges. Responsive checks also verify that the aircraft fits inside the illustration area at all seven widths. A mouse-only instrument ring changes shape over links and image controls while preserving the native cursor. Touch input and reduced-motion preferences suppress the ring. Closed project entries include preview images and discipline labels; they keep native disclosure and keyboard behavior.
+The precision pass uses mirrored top-down vehicle assemblies. The hull check samples 202 intermediate outlines for bilateral symmetry, closure, and intersecting edges. Responsive checks also verify that the aircraft fits inside the illustration area at all seven widths. Closed project entries use text, discipline labels, and hover illumination with the standard system cursor. N-ACXIS and trajectory modelling display complete primary images. Secondary pages have restrained scroll-linked lighting that shifts from green and warm tones toward slate blue; the homepage retains its existing lighting. Reduced-motion preferences keep the lighting static.
 
 ## Publishing on the existing GitHub Pages site
 

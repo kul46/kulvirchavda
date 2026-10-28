@@ -219,40 +219,20 @@ if (stage) {
   queueStage();
 }
 
-// A mouse-only instrument ring. The native cursor stays available and precise.
-const pointerRing = document.querySelector('.cursor-instrument');
-const precisionPointer = matchMedia('(hover: hover) and (pointer: fine)');
-if (pointerRing) {
-  let pointerFrame = 0;
-  let pointerX = 0;
-  let pointerY = 0;
-  let pointerTarget;
-  function drawPointer() {
-    pointerFrame = 0;
-    if (!precisionPointer.matches || reducedMotion.matches) { pointerRing.style.opacity = '0'; return; }
-    pointerRing.style.transform = `translate3d(${pointerX}px,${pointerY}px,0)`;
-    pointerRing.style.opacity = '1';
-    const interactive = pointerTarget?.closest('a,button,summary');
-    pointerRing.dataset.intent = interactive?.matches('[data-image]') ? 'image' : interactive ? 'link' : '';
-    const row = pointerTarget?.closest('.project-entry>summary');
-    if (row) {
-      const bounds = row.getBoundingClientRect();
-      row.style.setProperty('--project-x',`${pointerX-bounds.left}px`);
-      row.style.setProperty('--project-y',`${pointerY-bounds.top}px`);
-    }
-  }
-  document.addEventListener('pointermove', event => {
-    if (event.pointerType !== 'mouse' || !precisionPointer.matches || reducedMotion.matches) return;
-    pointerX = event.clientX;
-    pointerY = event.clientY;
-    pointerTarget = event.target instanceof Element ? event.target : null;
-    if (!pointerFrame) pointerFrame = requestAnimationFrame(drawPointer);
+// Keep the project hover light independent of the standard system cursor.
+const hoverPointer = matchMedia('(hover: hover) and (pointer: fine)');
+document.querySelectorAll('.project-entry>summary').forEach(row => {
+  let frame = 0;
+  let x = 0, y = 0;
+  row.addEventListener('pointermove', event => {
+    if (event.pointerType !== 'mouse' || !hoverPointer.matches || reducedMotion.matches) return;
+    const bounds = row.getBoundingClientRect();
+    x = event.clientX - bounds.left;
+    y = event.clientY - bounds.top;
+    if (!frame) frame = requestAnimationFrame(() => {
+      frame = 0;
+      row.style.setProperty('--project-x', `${x}px`);
+      row.style.setProperty('--project-y', `${y}px`);
+    });
   }, {passive: true});
-  const hidePointer = () => { pointerRing.style.opacity = '0'; };
-  document.addEventListener('pointerdown',event => { if (event.pointerType !== 'mouse') hidePointer(); },{passive:true});
-  document.addEventListener('pointerleave',hidePointer);
-  document.addEventListener('keydown',hidePointer);
-  document.addEventListener('visibilitychange',hidePointer);
-  precisionPointer.addEventListener('change',hidePointer);
-  reducedMotion.addEventListener('change',hidePointer);
-}
+});
