@@ -1,0 +1,319 @@
+/* Portraits, employment history and the NOMORA research brief. */
+.profile-page {
+  --profile-gutter: clamp(2rem, 6vw, 6rem);
+  --profile-space: clamp(3.5rem, 7vw, 7rem);
+}
+
+.profile-page h1,
+.record-section > h2,
+.degree-list h3,
+.nomora-name {
+  font-family: var(--serif);
+  font-weight: 400;
+  text-wrap: balance;
+}
+
+.profile-page h1 {
+  font-size: clamp(3.75rem, 7.9vw, 7.9rem);
+  line-height: .97;
+  letter-spacing: -.035em;
+}
+
+.profile-lead {
+  color: var(--ink);
+  font-size: clamp(1.15rem, 1.65vw, 1.55rem);
+  line-height: 1.5;
+  text-wrap: pretty;
+}
+
+.profile-kicker,
+.record-date,
+.profile-page > .wrap > header figcaption,
+.nomora-plate figcaption {
+  font: 400 .74rem/1.55 var(--mono);
+  color: var(--muted);
+}
+
+.profile-kicker,
+.record-date {
+  color: var(--orange);
+}
+
+.employment-intro,
+.biography {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, .85fr);
+  align-items: start;
+  column-gap: var(--profile-gutter);
+  padding-block: var(--profile-space);
+}
+
+.employment-heading .profile-lead,
+.biography-copy .profile-lead {
+  margin-block: 1.65rem;
+  max-width: 34em;
+}
+
+.employment-index {
+  max-width: 36rem;
+  margin-top: clamp(2rem, 3.8vw, 3.5rem);
+}
+
+.employment-index a {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto auto;
+  align-items: center;
+  column-gap: 1rem;
+  min-height: 3.35rem;
+  padding-block: .65rem;
+  border-top: 1px solid var(--line);
+}
+
+.employment-index a:last-child {
+  border-bottom: 1px solid var(--line);
+}
+
+.employment-index time,
+.employment-index .year-range {
+  font: .76rem var(--mono);
+  color: var(--muted);
+}
+
+.employment-index .ui-icon {
+  width: 1rem;
+  height: 1rem;
+  color: var(--orange);
+  transform: rotate(135deg);
+}
+
+.employment-index a:hover,
+.prose-link:hover,
+.research-return:hover {
+  color: var(--orange);
+}
+
+.employment-photo,
+.biography-photo {
+  justify-self: end;
+  width: min(100%, 28rem);
+}
+
+.employment-photo img,
+.biography-photo img {
+  width: 100%;
+  height: auto;
+}
+
+.employment-photo figcaption,
+.biography-photo figcaption,
+.nomora-plate figcaption {
+  margin-top: .7rem;
+}
+
+.work-profile .case {
+  display: grid;
+  grid-template-columns: minmax(0, .75fr) minmax(0, 1.25fr);
+  gap: 2rem var(--profile-gutter);
+  padding-block: var(--profile-space);
+  border-top: 1px solid var(--line);
+}
+
+.work-profile .case-head {
+  display: flex;
+  flex-direction: column-reverse;
+  align-self: start;
+  margin: 0;
+  gap: 1.6rem;
+}
+
+.work-profile .case-title h2 {
+  font: 400 clamp(2.6rem, 4.3vw, 4.8rem)/1.04 var(--serif);
+  letter-spacing: -.025em;
+}
+
+.work-profile .case-title .lead {
+  max-width: 32em;
+  margin-top: 1.1rem;
+  font-size: 1.04rem;
+  line-height: 1.6;
+  color: var(--ink);
+}
+
+.work-profile .case-meta {
+  border-left: 1px solid var(--orange);
+  padding-left: 1rem;
+}
+
+.work-profile .case-meta .eyebrow {
+  font: 500 .85rem/1.45 var(--sans);
+  text-transform: none;
+  letter-spacing: 0;
+  margin: 0 0 .45rem;
+  color: var(--ink);
+}
+
+.work-profile .case-meta p + p {
+  margin-top: .25rem;
+  color: var(--muted);
+  font-size: .83rem;
+}
+
+.work-profile .employer-mark {
+  width: 4.4rem;
+  height: 3.15rem;
+  object-fit: contain;
+  padding: 0 .35rem;
+  margin-bottom: 1.2rem;
+}
+
+.work-profile .case-body {
+  display: flex;
+  flex-direction: column;
+  align-self: start;
+  gap: 1.75rem;
+}
+
+.work-profile .case-copy {
+  max-width: 65ch;
+}
+
+.work-profile .case-copy h3 { margin-top: 0; }
+.work-profile .case-copy ul { margin-top: 0; padding-left: 1.15rem; }
+.work-profile .case-copy li { padding-left: .3rem; }
+.work-profile .case-copy li::marker { color: var(--orange); }
+.work-profile .case-image { width: 100%; height: auto; aspect-ratio: auto; max-height: none; filter: none; }
+
+.work-profile .video-grid,
+.work-profile .media-reel {
+  grid-column: 1 / -1;
+  margin-top: 0;
+}
+
+.work-profile .video-grid { gap: 1.5rem; }
+.work-profile .video-panel { border: 0; background: none; }
+.work-profile .video-panel video { height: auto; max-height: none; aspect-ratio: 16 / 10; background: #111113; }
+.work-profile .video-panel figcaption { padding: .7rem 0; display: flex; align-items: center; flex-wrap: wrap; justify-content: space-between; gap: .6rem; }
+.work-profile .video-panel figcaption strong { font-weight: 500; }
+.work-profile .video-status:empty { display: none; }
+.work-profile .video-status:not(:empty) { flex-basis: 100%; margin: 0; }
+.work-profile .video-play { background: transparent; border: 0; color: var(--ink); text-decoration: underline; text-underline-offset: .3em; padding-inline: 0; }
+.work-profile .gallery-image { background: #161719; border-color: var(--line); }
+.work-profile .media-reel:has(.media-track > figure:only-child) .reel-bar { display: none; }
+
+.biography {
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, .8fr);
+  align-items: center;
+}
+
+.biography-copy .profile-kicker { margin-bottom: 1.2rem; }
+.biography-copy h1 { max-width: 9em; }
+.biography-copy > p:not(.profile-lead, .profile-kicker),
+.nomora-brief > p:not(.profile-lead) {
+  max-width: 58ch;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.biography-copy .text-link,
+.nomora-brief .text-link {
+  margin-top: 1.6rem;
+}
+
+.prose-link { text-decoration: underline; text-underline-offset: .18em; }
+
+.record-section {
+  display: grid;
+  grid-template-columns: minmax(0, .65fr) minmax(0, 1.35fr);
+  gap: var(--profile-gutter);
+  border-top: 1px solid var(--line);
+  padding-block: clamp(2.5rem, 5vw, 5rem);
+}
+
+.record-section > h2 {
+  font-size: clamp(2.4rem, 4vw, 4rem);
+  line-height: 1.06;
+  letter-spacing: -.02em;
+}
+
+.degree-list article + article,
+.skill-list > div + div {
+  border-top: 1px solid var(--line);
+  margin-top: 1.4rem;
+  padding-top: 1.4rem;
+}
+
+.degree-list h3 {
+  font-size: clamp(1.7rem, 2.5vw, 2.65rem);
+  line-height: 1.1;
+  margin: .5rem 0;
+}
+
+.degree-list .record-detail {
+  font-size: .88rem;
+  color: var(--muted);
+  margin: .4rem 0 0;
+}
+
+.skill-list > div {
+  display: grid;
+  grid-template-columns: minmax(0, .72fr) minmax(0, 1.28fr);
+  gap: 1rem;
+  align-items: baseline;
+}
+
+.skill-list h3 { font: 500 1rem/1.4 var(--sans); }
+.skill-list p, .honor-list .award { font-size: .96rem; }
+.skill-list p { color: var(--muted); }
+.honor-list .award { display: flex; justify-content: space-between; gap: 1rem; padding-block: 1rem; }
+.honor-list .award:first-child { padding-top: 0; border-top: 0; }
+.honor-list .award span { flex-shrink: 0; font: .76rem/1.6 var(--mono); }
+
+.research-return {
+  display: inline-flex;
+  align-items: center;
+  gap: .6rem;
+  min-height: 44px;
+  margin-top: 1rem;
+  font: .82rem var(--sans);
+  color: var(--muted);
+}
+
+.research-return .ui-icon { transform: rotate(225deg); }
+
+.nomora-paper {
+  display: grid;
+  grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr);
+  column-gap: var(--profile-gutter);
+  row-gap: 2rem;
+  align-items: start;
+  padding: clamp(2rem, 4vw, 4rem) 0 var(--profile-space);
+}
+
+.nomora-heading h1 { margin: 1.15rem 0; }
+.nomora-name { max-width: 20em; font-size: clamp(1.45rem, 2.3vw, 2.4rem); line-height: 1.16; color: var(--muted); }
+.nomora-plate { grid-column: 2; grid-row: 1 / 3; align-self: center; }
+.nomora-plate .mission-svg { width: 100%; height: auto; aspect-ratio: 660 / 470; }
+.nomora-brief { grid-column: 1; padding-top: 1.6rem; border-top: 1px solid var(--line); }
+
+@media (max-width: 760px) {
+  .profile-page { --profile-gutter: 2rem; }
+  .employment-intro, .biography, .nomora-paper {
+    grid-template-columns: minmax(0, 1fr);
+    row-gap: 2rem;
+  }
+  .employment-photo { width: 100%; }
+  .employment-photo img { aspect-ratio: 4 / 3; object-fit: cover; object-position: center 50%; }
+  .biography-photo { width: min(100%, 22rem); justify-self: start; }
+  .work-profile .case { grid-template-columns: minmax(0, 1fr); row-gap: 1.75rem; }
+  .employment-index { max-width: none; }
+  .record-section { grid-template-columns: minmax(0, 1fr); gap: 1.75rem; }
+  .nomora-plate, .nomora-brief { grid-column: auto; grid-row: auto; }
+  .nomora-paper { padding-top: 2rem; }
+}
+
+@media (max-width: 490px) {
+  .profile-page h1 { font-size: clamp(3.35rem, 15vw, 4.5rem); }
+  .skill-list > div { grid-template-columns: minmax(0, 1fr); gap: .45rem; }
+  .work-profile .video-grid { gap: 1rem; }
+  .employment-index a { column-gap: .65rem; }
+}

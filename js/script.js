@@ -102,7 +102,7 @@ projects.forEach(project => project.addEventListener('toggle', () => {
 window.addEventListener('hashchange', openLinkedProject);
 openLinkedProject();
 
-// Scroll moves the contour and orbital layers; there is no perpetual animation loop.
+// Update the background light only when the reading position changes.
 const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
 let scrollFrame = 0;
 function updateJourney() {
@@ -159,65 +159,6 @@ document.querySelectorAll('.copy-email').forEach(button => {
     }
   });
 });
-
-// A shared silhouette changes shape across three engineering environments.
-const stage = document.querySelector('.exploration-stage');
-if (stage) {
-  stage.classList.add('js-stage');
-  const pin = stage.querySelector('.stage-pin');
-  const hull = stage.querySelector('.craft-hull');
-  const shapes = [
-    [[-38,-58],[0,-72],[38,-58],[52,-12],[48,34],[28,55],[0,62],[-28,55],[-48,34],[-52,-12],[-38,-58]],
-    [[-12,-112],[0,-148],[12,-112],[22,42],[14,96],[6,114],[0,120],[-6,114],[-14,96],[-22,42],[-12,-112]],
-    [[-60,-85],[0,-95],[60,-85],[72,-25],[72,45],[45,78],[0,88],[-45,78],[-72,45],[-72,-25],[-60,-85]]
-  ];
-  const names = ['Field robotics.', 'Aircraft & flight.', 'Space robotics.'];
-  const notes = ['How do we move through what we don’t yet know?', 'The same curiosity, with a different view.', 'An interest in exploration beyond Earth.'];
-  let selected = 0;
-  let frame = 0;
-  const shortStage = matchMedia('(max-height: 600px) and (min-width: 601px)');
-  function render(progress) {
-    const segment = progress < .5 ? 0 : 1;
-    const amount = Math.min(1,Math.max(0,(progress - segment * .5) * 2));
-    const t = amount * amount * (3 - 2 * amount);
-    const points = shapes[segment].map((point,i) => point.map((value,j) => (value + (shapes[segment+1][i][j] - value) * t).toFixed(1)));
-    hull.setAttribute('d', points.map((p,i) => `${i ? 'L' : 'M'}${p[0]} ${p[1]}`).join('')+'Z');
-    // Retract attachments before extending the next set, avoiding overlapping outlines.
-    const retract = Math.max(0,1 - t * 3);
-    const extend = Math.max(0,(t - .65) / .35);
-    stage.querySelector('.craft-drone').setAttribute('opacity', String(segment === 0 ? retract : 0));
-    stage.querySelector('.craft-flight').setAttribute('opacity', String(segment === 0 ? extend : retract));
-    stage.querySelector('.craft-rover').setAttribute('opacity', String(segment === 1 ? extend : 0));
-    stage.querySelector('.stage-space').setAttribute('opacity', String(segment === 1 ? t : 0));
-    stage.querySelector('.stage-ground').setAttribute('opacity', String(1-progress*.75));
-    const index = progress < .26 ? 0 : progress < .76 ? 1 : 2;
-    stage.querySelector('.stage-title').textContent = names[index];
-    stage.querySelector('.stage-note').textContent = notes[index];
-    stage.querySelector('.stage-index').textContent = `0${index+1} / 03`;
-    stage.querySelectorAll('[data-stage]').forEach((button,i) => button.setAttribute('aria-pressed', String(i === index)));
-  }
-  function updateStage() {
-    frame = 0;
-    if (reducedMotion.matches || shortStage.matches) { render(selected); return; }
-    const top = parseFloat(getComputedStyle(pin).top) || 0;
-    const distance = Math.max(1,stage.offsetHeight - pin.offsetHeight);
-    render(Math.min(1,Math.max(0,(top - stage.getBoundingClientRect().top) / distance)));
-  }
-  function queueStage() { if (!frame) frame = requestAnimationFrame(updateStage); }
-  stage.querySelectorAll('[data-stage]').forEach(button => button.addEventListener('click', () => {
-    selected = Number(button.dataset.stage);
-    if (reducedMotion.matches || shortStage.matches) { render(selected); return; }
-    const top = parseFloat(getComputedStyle(pin).top) || 0;
-    window.scrollTo({top: scrollY + stage.getBoundingClientRect().top - top + (stage.offsetHeight-pin.offsetHeight)*selected,behavior:'instant'});
-    queueStage();
-  }));
-  window.addEventListener('scroll',queueStage,{passive:true});
-  window.addEventListener('resize',queueStage,{passive:true});
-  reducedMotion.addEventListener('change',queueStage);
-  shortStage.addEventListener('change',queueStage);
-  new ResizeObserver(queueStage).observe(stage);
-  queueStage();
-}
 
 // Keep the project hover light independent of the standard system cursor.
 const hoverPointer = matchMedia('(hover: hover) and (pointer: fine)');

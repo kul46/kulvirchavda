@@ -1,1 +1,20 @@
-{"name":"Kulvir Jaydeep Chavda","short_name":"KC","start_url":"../index.html","icons":[{"src":"android-chrome-192x192.png","sizes":"192x192","type":"image/png"},{"src":"android-chrome-512x512.png","sizes":"512x512","type":"image/png"}],"theme_color":"#f4f2eb","background_color":"#f4f2eb","display":"standalone"}
+{
+  "name": "Kulvir Jaydeep Chavda",
+  "short_name": "KC",
+  "start_url": "../index.html",
+  "icons": [
+    {
+      "src": "android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#101210",
+  "background_color": "#101210",
+  "display": "standalone"
+}

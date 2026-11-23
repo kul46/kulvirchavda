@@ -16,7 +16,7 @@ Then open http://127.0.0.1:4174. If Python is not on PATH, use the Python execut
 
 | File | Purpose |
 | --- | --- |
-| `index.html` | Homepage and project highlights |
+| `index.html` | Homepage, cover photograph, and links to the portfolio |
 | `nomora.html` | Current CMU research, concept diagram, and high-level brief |
 | `projects.html` | Seven expandable engineering projects, each with one full description |
 | `research.html` | Prior research, publication, and demonstration video |
@@ -24,9 +24,11 @@ Then open http://127.0.0.1:4174. If Python is not on PATH, use the Python execut
 | `education.html` | About, education, skills, and awards |
 | `css/style.css` | Shared design, layout, responsive styles, and reduced-motion support |
 | `css/portfolio.css` | Project galleries, video layout, terrain accents, and phone refinements |
-| `css/night.css` | Dark palette, orbital and terrain layers, project register, and media strips |
-| `css/motion.css` | Vector icons, iOS control styling, full image boards, and the scroll-driven vehicle illustration |
-| `css/precision.css` | Black palette, project hover illumination, subtle page lighting, full research images, and refined schematic rendering |
+| `css/night.css` | Dark media components, project register, and media strips |
+| `css/motion.css` | Vector icons, iOS control styling, and full image boards |
+| `css/editorial.css` | Shared palette and navigation, homepage photography and type, and contact footer |
+| `css/archive.css` | Projects and Research layouts, full research images and project hover |
+| `css/profile.css` | Work Experience, About, and NOMORA layouts |
 | `js/script.js` | Mobile navigation, project expansion, media strips/viewer, scroll motion, and email copying |
 | `files/cv.pdf` | Supplied August 2026 CV |
 | `images/optimized/` | Smaller WebP copies of existing portfolio photographs |
@@ -47,25 +49,17 @@ The fonts load from Google Fonts with local serif/sans-serif fallbacks. There ar
 - Caption-free media strips are visible within each entry. Images expand in a viewer with previous/next buttons, arrow keys, Escape, and focus return. The descriptions accompanying the media remain in the project text.
 - L1 rocket, indoor skydiving robot, Falcon 9 CAD, and home solar use their complete image boards as primary media, with single-image zoom. Cosmological uses its logo as the primary image. Header images are omitted from their accompanying media strips.
 - Navigation and structured metadata omit the GitHub profile. Arrow icons are inline SVG paths so their rendering does not depend on platform emoji fonts.
-- The homepage illustration morphs a shared SVG silhouette across three conceptual engineering interests. Native scrolling drives the geometry. Reduced-motion preferences and short landscape viewports use selectable static stages instead of a pinned sequence.
 
 ## Validation
 
 ```powershell
 python scripts/check_site.py
 node --check js/script.js
-python scripts/check_illustration.py
 ```
 
 The Python check verifies local assets, path capitalization for Linux/GitHub Pages, fragments, duplicate IDs, image alt attributes, basic metadata, and the custom domain. Also review the site in a browser at phone and desktop sizes after layout changes.
 
-The October 27 revision was checked at 320, 360, 390, 430, 768, and 1280 CSS pixels across all six pages. Browser checks covered all seven project filters, mobile menu navigation and Escape, in-page galleries and focus return, email copying, and playback of all six videos. This is browser-based responsive testing, not certification on physical iOS or Android devices.
-
-The October 28 dark revision was checked across all six pages at 320, 390, 768, and 1280 CSS pixels. Phone interaction checks covered the expandable project register, media-strip controls, viewer next/previous, Escape, and menu navigation. The Parkland qualification now explicitly says Licensed Private Pilot, and the bio identifies flying planes.
-
-The later motion revision was checked on all six pages at 320, 390, 430, 768, 1024, 1280, and 1920 CSS pixels. Browser interactions verified the three distinct SVG hull shapes, phone stage selection, 844×390 landscape fallback, full project-board images, single-image zoom, and menu colors. Physical iPhone Safari was not available for testing; the platform-specific text arrows were replaced with SVG and native button appearance was explicitly reset.
-
-The precision pass uses mirrored top-down vehicle assemblies. The hull check samples 202 intermediate outlines for bilateral symmetry, closure, and intersecting edges. Responsive checks also verify that the aircraft fits inside the illustration area at all seven widths. Closed project entries use text, discipline labels, and hover illumination with the standard system cursor. N-ACXIS and trajectory modelling display complete primary images. Secondary pages have restrained scroll-linked lighting that shifts from green and warm tones toward slate blue; the homepage retains its existing lighting. Reduced-motion preferences keep the lighting static.
+For the homepage directory, keep each heading in a single text node. Browser line wrapping preserves spaces on phones. The cover photograph links directly to its project.
 
 ## Publishing on the existing GitHub Pages site
 
